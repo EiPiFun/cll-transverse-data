@@ -1,0 +1,2231 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage[numbers,comma,square,sort&compress]{natbib}
+\geometry{a4paper,scale=0.9}
+\graphicspath{{cll_transverse_draft_images/}}
+\linespread{1.0}
+\bibliographystyle{unsrt}
+
+\begin{document}
+
+\begin{center}
+\LARGE Solvent and size influences on cellulose transverse\\
+anisotropy and according structure design\\
+\end{center}
+
+\begin{center}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+Xu Dong$^{1,}$\footnote{Corresponding author, Email: donx@zuaa.zju.edu.cn}\\
+$^{1}$\textit{Department of Engineering Mechanics, Zhejiang University, Hangzhou 310027, China}
+\end{center}
+
+\begin{center}
+Keywords: cellulose, anisotropy, hydrogen bonds, structure design, structure optimization
+\end{center}
+
+\section*{Abstract}
+\addcontentsline{toc}{section}{\protect\numberline{}Abstract}\indent
+
+Cellulose nanocrystals (CNCs) with numerous merits is a new type of cellulose materials, the most opulent natural polymer resources on earth.
+Sidechain hydroxyls, hydrogen bonds and particular crystal structures lead to unique anisotropy of CNCs.
+Hydroxyls-induced polarity is a critical advantages of CNCs, making it promising for advanced designs and applications.
+However, the meticulous anisotropy in the transverse section is not stressed enough and could not be delicately described by experiments.
+According to previous researches, the influences of solvents on the performances of CNCs are already covered.
+And only a few former researches demonstrate the size-performance relations of CNCs.
+Cellulose materials manufacture requires a better understanding of anisotropy, solvent influences and size dependence.
+However, a systematic comparisons of solvents influences and an data-based explanation of size dependence is still lacking.
+In this work, anisotropic performances of CNCs under characteristic directions and tens of types of solvent environments are carefully inspected and compared using molecule simulations.
+Furthermore, a data-supported explanation for the size dependence simulations and transverse arrangement toughness-enhanced designs are proposed.
+These systematic comparisons and unique transverse arrangements could help future cellulose material applications.
+
+\section*{Introduction}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Introduction}\indent
+
+\subsection{Research Background and Significance}\indent
+
+Under the background of resource scarcity and environmental pollution, the development and utilization of new materials is an important means to promote sustainable social development.
+The non-renewability of fossil energy and the environmental pollution it causes have become one of the primary problems of human society.
+New energy sources represented by wind, geothermal, water, and nuclear energy already occupy an important share of human energy consumption, and the proportion of new energy is still increasing.
+However, the fossil energy industry does not only provide energy for mankind; the by-products of the refining process are the main raw materials for many types of polymer materials.
+Materials relying on fossil energy, represented by plastics, are widely used at present.
+They have advantages in terms of cost and processing difficulty but are difficult to degrade naturally, which is detrimental to environmental protection.
+Utilizing natural resources to develop green, recyclable, and environmentally friendly materials has become a key research topic for researchers.
+Cellulose is the most abundant natural polymer material on Earth, with a wide range of sources including trees, bamboo, seaweed, oil palms, and bacteria.
+By mass, $1.5 \times 10^{21}$ tons of the annual biomass production on Earth consists of cellulose [2], which can be considered an almost inexhaustible environmentally friendly resource [3].
+In addition to its large reserves, low cost, easy accessibility, environmental friendliness [4,5], recyclability [4,5], and biodegradability [6,7],
+cellulose materials also possess excellent biocompatibility [6,7] and mechanical properties [8].
+This low-cost, widely sourced material with potential for large-scale application has received extensive attention [1,2,8] and has the potential to be applied in numerous fields,
+such as textiles [9,10], packaging [11,12], biopharmaceuticals [13,14], water treatment [15,16], energy storage [17-19], hydrogen storage [20,21], optical devices [22-24], electronic devices [25,26], smart materials [27,28], agriculture [29,30], and the food industry [31,32].
+
+However, while cellulose nanomaterials, including cellulose nanocrystals, are widely studied and applied, research on the basic properties------mechanical properties------of cellulose nanocrystals is still insufficient.
+Systematic research on the mechanical properties of different configurations of cellulose nanocrystals under different solvent conditions and the construction of coarse-grained models that fully characterize their anisotropy still face deficiencies.
+
+\subsection{Introduction to Cellulose Nanomaterials}\indent
+
+Cellulose is the most abundant natural polymer material on Earth and possesses many excellent properties.
+The history of human application of cellulose materials is long and storied.
+From the Stone Age to the present, bamboo and wood materials have always been important materials widely used in human clothing, food, housing, and transportation.
+Even in modern society with its abundant materials, utensils and buildings constructed using bamboo and wood materials are still popular and are considered beneficial to human health, as they can absorb harmful substances such as formaldehyde.
+In the garment industry, plant-based cellulose materials represented by cotton and linen have long been used as clothing materials, competing directly with synthetic fibers such as polyester in the consumer market.
+Driven by technological progress, human ability to apply cellulose materials is also constantly improving.
+Also in the garment industry, regenerated fibers represented by viscose fiber have been widely used, offering excellent performance at low prices;
+based on its biocompatibility, cellulose films are widely used in food packaging, pharmaceutical packaging, and other fields.
+In addition to direct use as bamboo, wood, and fibers [33,34], researchers are constantly trying to develop more advanced application forms of cellulose, such as films [35,36], beads [37,38], aerogels [39,40], hydrogels [39,41], and bioplastics [42,43].
+More attention is being paid to cellulose materials from a microscopic perspective, using experimental and simulation methods to focus on cellulose nanomaterials.
+
+Generally speaking, a cellulose material with a fiber size of less than $100 \mu m$ can be called a cellulose nanomaterial [44].
+Cellulose nanomaterials mainly include cellulose nanofibers [44] and cellulose nanocrystals [2,45].
+The direct difference between the two lies in the extension direction, i.e., along the cellulose chain direction or along the cross-sectional direction.
+Through more precise microscopic control, cellulose nanomaterials can exhibit superior performance compared to traditional cellulose materials, possessing excellent properties such as high elastic modulus [8,46], high transparency [47], and low thermal expansion coefficient [48] that traditional cellulose materials do not have [44,49].
+Cellulose nanofibers are typical one-dimensional fibrous materials with lengths exceeding $1 \mu m$ and cross-sectional dimensions of $4$-$100 nm$.
+The elastic modulus along the fiber direction can reach $50$-$200 GPa$, and the strength can reach $1$-$6 GPa$, which is higher than that of wood fibers and plant fibers in nature (axial elastic modulus of $5$-$50 GPa$, strength less than $1 GPa$) [3].
+Cellulose nanocrystals have smaller dimensions, with lengths of $50$-$500 nm$ and cross-sectional dimensions of $3$-$20 nm$.
+They are products of the regular arrangement of cellulose chains, with an axial modulus reaching $100$-$200 GPa$, strength of $7$-$8 GPa$, and a cross-sectional modulus that can also reach $5$-$100 GPa$ [3].
+Compared to cellulose nanofibers and other one-dimensional materials with similar mechanical properties, such as Kevlar fibers, carbon fibers, and carbon nanotubes [8], a significant feature of cellulose nanocrystals is their three-dimensional structure and performance.
+Their axial and cross-sectional elastic moduli both reach quite high levels. Based on this, advanced materials with high strength, high toughness [50], high transparency [51], and sensing capabilities [52] can be developed.
+Among these two types of cellulose nanomaterials, cellulose nanocrystals, which have higher strength and more potential for various application forms [53], are the focus of this work.
+
+Another significant advantage of cellulose nanomaterials is their ability to interact with polar particles.
+Beyond the ring composed of carbon and oxygen atoms, the cellulose monomer has a polar functional group: the hydroxyl group.
+As an important functional group of organic molecules, the hydroxyl group can undergo electrostatic interactions with a large number of particles and functional groups.
+The widespread hydrogen bonds within cellulose nanocrystals are an important reason for their stable structure [54].
+For this reason, compared to materials like Kevlar, carbon fiber, and carbon nanotubes, cellulose nanomaterials have a large number of active hydroxyl groups and can generate electrostatic interactions with polar molecules and charged particles without chemical modification.
+This provides unique advantages in the development of composite materials, smart materials, and other advanced application fields [2].
+The resulting materials can possess special properties, such as antibacterial properties, conductivity, and sensing capabilities [55-58].
+Sensors and biosensors based on cellulose nanomaterials (sensing pH [59], humidity [60], temperature [61], electromagnetic signals [62], etc.) are key frontiers of researcher focus.
+Due to their excellent mechanical properties, cellulose nanomaterials are also good reinforcing substrates for composite materials [53,63,64].
+
+Since cellulose is widely present in plants, the dissociation, purification, and reconstruction of plant cellulose raw materials are important processes for extracting cellulose materials.
+The crystalline region part of the cellulose unit fibers extracted from plant raw materials using mechanical methods (using force, pressure, and temperature) [65,66] or chemical methods (using strong inorganic solvents, polar organic solvents, and enzymes) [67-72] is an important source of cellulose nanocrystals [2,67,68,73,74].
+To accelerate dissociation and regulate product performance, researchers have tried using solutions [75-78] and loading [79] methods to transform $I\beta$-type cellulose nanocrystals into other configurations to promote dissociation.
+After dissociation, factors such as coagulants [80,81], temperature [82,83], humidity [84], and treatment time also affect final mechanical [46], optical [47], electromagnetic [85], and other properties [84,86,87].
+Considering the fibrous structure of cellulose, researchers can use methods such as cross-linking [88] and alignment [89,90] to optimize the mechanical properties of cellulose nanomaterials [74,91].
+
+Precisely due to the superior performance of cellulose nanomaterials, researchers have developed a large number of new materials and opened up many application scenarios.
+Cellulose nanomaterials have a high elastic modulus and are good reinforcing materials and substrates for composite materials.
+Adding 5\% cellulose nanofibers to polyvinyl alcohol can double the elastic modulus of the composite material [92].
+Composite materials using cellulose as a substrate can be used for battery separators and battery electrodes [93,94].
+Cellulose nanomaterials made with specific processes have good optical properties and can be used to make OLEDs (organic light-emitting diodes) [48].
+By compounding other components, researchers have developed smart materials based on cellulose that can sense temperature [95], electrical signals [85], pH [96], and magnetic signals [97].
+Considering the biocompatibility of cellulose materials, they can be applied to broad fields such as sensing and drug delivery [98].
+
+Peng et al. used NMMO solution treatment to prepare cellulose membranes with special selective permeability, which are water-permeable but airtight [73].
+Jiaping Zhang et al. used EMIMDEP (1-Ethyl-3-methylimidazolium diethylphosphate) ionic solution to prepare cellulose fibers with high crystallinity and tidy alignment [74].
+Xu et al. noted that cellulose materials often lack antibacterial properties and are easily destroyed by bacterial infection; they added copper ions and Schiff base during the preparation of cellulose materials to produce cellulose materials with antibacterial properties [55].
+Chen et al., aiming at the shortcomings of cellulose hydrogels in terms of conductivity and mechanical properties, added acrylonitrile and acrylamide into a zinc chloride solution environment to produce a cellulose hydrogel with high extensibility (1730\%), high tensile strength ($160 kPa$), high elasticity (90\%), and good conductivity, which can be applied to wearable strain sensors [56].
+Zhu et al. connected several layers of MXene and cellulose nanopaper through hydrogen bonds to prepare a flexible MXene/cellulose nanopaper bilayer material with strong conductivity, which can be applied to electromagnetic interference or other electronic devices [57].
+Jiao et al. designed a composite hydrogel containing polyaniline, polyacrylic acid, and TEMPO-oxidized cellulose nanofibers, which has good conductivity, mechanical properties, and self-healing properties, and can be used to make flexible stress sensors applied in health monitoring and intelligent robots [58].
+Chen et al. dispersed cellulose fibers in an ionic liquid-water mixture to construct a cellulose nanopaper with a flexible nano-network structure, which has high toughness ($51 MJ/m^3$) and high extensibility (35\%), while not losing high strength ($260 MPa$) [50].
+Cebrian et al. developed an economical method to improve transparency by spraying recycled petrochemical plastics and D-limonene solution, preparing highly transparent bacterial cellulose designed for use in flexible OLEDs (organic light emitting diodes) [51].
+Among these, the development of sensors and biosensors based on cellulose nanomaterials is an important research frontier [38]. The prepared sensors can sense temperature [61], acidity/pH [59], humidity [60], electromagnetic [58], and other signals.
+
+Due to the limitations of experimental techniques, molecular dynamics is quite important for understanding the microscopic mechanisms of cellulose nanomaterials,
+such as the aggregation behavior of cellulose in sodium hydroxide/urea aqueous solutions [99], the absorption of metal ions in cellulose [100], the interfacial nanostructure and interaction between calcium silicate hydrate and cellulose [101],
+the adsorption/inhibition effects of lignin and cellulose in hydrochloric acid aqueous solution [102], and others [103-106].
+Some molecular simulations focus on cellulose nanocrystals and their interactions with other molecules, similar to the wetting effects of water and organic molecules on the two surfaces of cellulose nanocrystals (with or without hydroxyl exposure) [107],
+the impact of the dehydration process on the superstructure and mechanics of water-swollen cellulose nanocrystals [108], and the effects of solvents such as water [109-111].
+Hydroxyl groups and hydrogen bonds often play a key role.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.64\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_structure/cellulose_molecular_structure_and_hydrogen_bonds.png}
+        \subcaption{\cite{moon2016overview}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_structure/cross_section_of_cellulose_nanocrystal.png}
+        \subcaption{\cite{moon2016overview}}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Cellulose nanocrystal molecular structure.
+    (a) The chain structure of cellulose molecules is formed by the interval splicing of residues with two rotation directions, and under the electrostatic action of side-chain hydroxyl groups, hydrogen bonds exist within the same cellulose chain and between adjacent cellulose chains.
+    (b) The cross-section of cellulose nanocrystals has a special lamellar structure (where the diagonal rectangles represent the cross-section of a cellulose chain).
+    There are strong hydrogen bonding interactions between cellulose chains within the same layer; these layers are called hydrogen bonding planes.
+    }
+    \label{fig:cellulose_molecular_strcuture}
+\end{figure}
+
+Cellulose nanocrystals have typical anisotropy, with structure and mechanical properties being significantly different in the direction along the chain versus perpendicular to the chain [28].
+Previous researchers used X-ray diffraction [112], nuclear magnetic resonance spectroscopy [113], and other techniques to observe that cellulose materials under natural conditions have a segmented structure in the fiber direction, with crystalline and non-crystalline (amorphous) parts arranged sequentially [46,114], as shown in Figure \ref{fig:cellulose_molecular_strcuture}.
+Due to the flattened structure of cellulose monomers and the hydrogen bonding between side-chain hydroxyl groups, cellulose nanocrystals have very high strength and elastic modulus [8], while the amorphous region possesses important viscoelastic characteristics [114].
+Moreover, $I\beta$-type cellulose nanocrystals exhibit a unique lamellar structure [54]: hydrogen bonds are mainly formed between cellulose monomers within the same lamella, forming a layer with strong internal interactions; several parallel lamellae are arranged to form $I\beta$-type cellulose nanocrystals, primarily dominated by van der Waals interactions.
+From the perspective of structure and interaction, these lamellae dominated by hydrogen bonding are important features of $I\beta$-type crystals, causing cellulose nanocrystals to exhibit significant anisotropic mechanical properties.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_structure/cellulose_hydrogen_bonding_pattern_i.png}
+        \subcaption{\cite{wohlert2022cellulose}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_structure/cellulose_hydrogen_bonding_pattern_ii.png}
+        \subcaption{\cite{wohlert2022cellulose}}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Cellulose nanocrystal arrangements and hydrogen bonding patterns.
+    (a) Arrangement forms of Type I and (b) Type II cellulose nanocrystals.
+    There is more than one type of cellulose nanocrystal that can be formed by the parallel arrangement of cellulose chains.
+    This work focuses on the two most common arrangement configurations, Type I and Type II, among which Type I nanocrystals widely exist in plants and are also known as natural cellulose crystals.
+    The difference between the two arrangements lies in the direction and arrangement interval of the side-chain hydroxyl groups.
+    The side-chain hydroxyl direction of Type I nanocrystals is entirely tg-type, while Type II is an alternating arrangement of tg-type and gt-type.
+    The corresponding hydrogen bond forms are also different; Type I nanocrystals have more intrachain hydrogen bonds, while nanocrystals with gt-type focus on interchain hydrogen bonds.
+    Unless explicitly specified, the cellulose nanocrystals mentioned in this work refer to Type I nanocrystals.
+    }
+    \label{fig:cross_section_and_hydrogen_bonds}
+\end{figure}
+
+The main interaction type of cellulose along the chain direction is covalent bonding, with an axial modulus reaching $100$-$200 GPa$, which is the source of the high elastic modulus of cellulose nanocrystals.
+The main interaction in the cross-sectional direction is non-bonding interaction; the dominant interaction within the hydrogen-bonded layer is non-bonding hydrogen bonding, while the dominant interaction between hydrogen-bonded layers is non-bonding van der Waals interaction.
+The strength of hydrogen bonding is higher than that of van der Waals interaction, so cellulose nanocrystals still possess significant anisotropy within the cross-section. There are various configurations or arrangement modes of cellulose nanocrystals, including $I\alpha$, $I\beta$, $II$, $III$, $IV$, etc.
+The properties of different configurations of cellulose nanocrystals are all different.
+Among them, the most common and dominant one in plant materials is $I\beta$.
+$I\beta$-type cellulose nanocrystals are also called natural cellulose [2].
+Researchers have measured the geometric data of different types of cellulose crystals [112,115,116] and noted that different types of cellulose crystals can be transformed into each other [75-77,109,117].
+When cellulose nanocrystals are mentioned subsequently, if there is no explicit explanation, $I\beta$-type cellulose nanocrystals are implied by default.
+
+This thesis will focus on $I\beta$-type and $II$-type cellulose nanocrystals, which are more abundant in nature (Figure 1-2).
+Due to the current lack of experimental techniques, molecular dynamics simulation is very important for analyzing the microscopic mechanism of cellulose nanomaterials, such as interfacial sliding [118], loading direction [119,120], hydrogen bonds [119], and the impact of size-dependent edge effects [121] on cellulose structure.
+
+Diddens et al. used X-ray diffraction technology to measure the elastic modulus of $I\beta$-type cellulose along the chain direction and perpendicular to the chain direction.
+They found that the elastic modulus along the chain direction can reach $220 GPa$, while the elastic modulus in the cross-sectional direction perpendicular to the chain is $15 GPa$ [122].
+Zhang et al. systematically simulated and detected the effects of loading direction, interfacial humidity, and non-aligned structures on the mechanical behavior of the cellulose nanocrystal-nanocrystal interface, finding a significant positive correlation between hydrogen bond density and interaction energy [119].
+Sinko et al., based on molecular dynamics simulations, proposed a conclusion that edge effects dependent on crystal width have a key influence on fracture energy; however, the reduction of fracture energy by edge effects, especially for small crystal blocks, weakens as size increases and can be ignored after a critical width.
+On the other hand, the collective effect of cellulose lamellae stacking and stability caused by van der Waals interactions saturates at a critical crystal thickness.
+Furthermore, they constructed an analytical relationship based on a physical model to predict fracture energy.
+They found that cellulose nanocrystals reach optimal fracture energy when the thickness is $4.8$-$5.6 nm$ (about 6-7 layers) and the width is $6.2$-$7.3 nm$ (about 6-7 cellulose chains), which happens to correspond to the dimensions of cellulose nanocrystals found in nature [121].
+Wu et al. simulated the frictional sliding phenomenon between two layers of cellulose under different loading speeds, normal stresses, and plane-to-plane angles, finding that the number of hydrogen bonds and the interlayer distance are key factors affecting friction [118].
+Wu et al. also conducted research on the anisotropy of cellulose nanocrystals, simulating tension under different strain rates in three orthogonal directions, and found that mechanical properties such as elastic modulus and Poisson's ratio are highly anisotropic and independent of the strain rate [120].
+
+\section*{Methods}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Methods}\indent
+
+\subsection{Simulation setup}\indent
+
+For both all atom (AA) and coarse-grained (CG) simulations, three models in different arrangement directions under the NPT ensemble at 0.1 MPa with a stretch load in the vertical direction were simulated.
+All reference AA simulations were performed using GROMACS\cite{abraham2015gromacs,bjelkmar2010implementation} and CHARMM36\cite{huang2013charmm36,huang2017charmm36m} force fields (force field files were generated using CHARMM-GUI tools\cite{jo2008charmm,lee2016charmm}).
+All the CG simulations were performed using LAMMPS\cite{thompson2022lammps} with a self-defined force field.
+Referring to the performance-size curves obtained by Sinko et al.\cite{sinko2014dimensions}, we used a CNC model comprising 144 cellulose chains.
+Fragile vertical and horizontal models with 72 cellulose chains were used to reduce the computational cost of the simulations during training.
+Vertical stretches were implemented using cell deformation loads at a constant speed 10.0 nm/ns.
+100 replica AA simulations with different stretch speed ranging from 0.1 nm/ns to 40.0 nm/ns were performed.
+The AA simulation results confirmed that the sampled strength and toughness were stable within this speed range (with deviations of less than 15\%, as shown in Figure \ref{fig:aa_transverse_stretch_performance_with_speed}).
+Figure \ref{fig:aa_transverse_stretch_curve_collection} shows the stress-strain curves of the 100 replica simulations at 10.0 nm/ns.
+
+\section*{Results}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Results}\indent
+
+\subsection{Anisotropic Mechanical Properties of Cellulose Nanocrystals}\indent
+
+The primary work of this chapter is to use molecular dynamics (MD) simulation methods to conduct numerical simulations on the anisotropic mechanical properties of Cellulose I and Cellulose II nanocrystals.
+Considering the dense structure of cellulose nanocrystals and the dominant role of stable, hard-to-break chemical bonds along the chain direction, the focus of this simulation part is on the mechanical properties of cellulose nanocrystals in different characteristic directions within the cross-section.
+The corresponding MD results can describe the mechanical properties of cellulose nanocrystals in terms of both structural evolution and mechanical property data, providing microscopic structural details and dynamic evolution processes that are difficult to reflect in experiments.
+Previous molecular simulations of cellulose nanocrystals have had deficiencies in considering characteristic directions and Cellulose II nanocrystals; statistical sampling of performance data and the handling of the velocity dependence of performance data also need to be strengthened.
+A unique advantage of cellulose nanocrystals lies in their three-dimensional structure.
+After conducting more thorough research on the anisotropic mechanical properties of cellulose nanocrystals, specific ideas for structural optimization can be proposed.
+
+\subsubsection{Tensile Mechanical Properties of Cellulose I Nanocrystals}\indent
+
+According to the experimental data measured by Yoshiharu Nishiyama et al., the three characteristic dimensions of the cellulose nanocrystal lattice are a=0.7784 nm, b=0.820 nm , c=1.038 nm.
+Within the cross-sectional direction of the nanocrystal, the angle between the horizontal and vertical sides of the lattice is 96.55$^\circ$, and different layers are arranged in a staggered manner.
+As mentioned in the introduction, the dominant interaction within a flat sheet of cellulose nanocrystals is hydrogen bonding (Hydrogen Bonding), while the dominant interaction between different transverse sheets is the van der Waals force.
+Therefore, the cross-sectional structure and interactions of cellulose nanocrystals exhibit orthotropic anisotropy, with the structure and performance being symmetric relative to the hydrogen-bonded sheets.
+
+Hydrogen bonds have a strength between that of chemical bonds and van der Waals interactions, primarily referring to the polar non-covalent interaction formed between a hydrogen atom in a hydrogen-containing group and an atom with strong electronegativity in an adjacent molecule.
+In a set of hydrogen bonds, the hydrogen atom usually forms a polar covalent bond with a strongly electronegative atom (such as oxygen, nitrogen, or fluorine).
+Under the attraction of the strongly electronegative atom, the electron cloud of the hydrogen bond leans toward this electronegative atom, making the hydrogen atom positively charged;
+this positively charged hydrogen atom can then interact with another strongly electronegative atom, forming an Acceptor:Hydrogen-Donor non-covalent bond-covalent bond interaction.
+The bond energy of a covalent bond is 100 $\rm{kJ/mol}$, the bond energy of a hydrogen bond is 10-40$\rm{kJ/mol}$, and the van der Waals interaction bond energy is less than 10$\rm{kJ/mol}$.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/lattice_dimensions.png}
+        \subcaption{\cite{shishehbor2019effects}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.64\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/cellulose_hydrogen_bonding_pattern_i.png}
+        \subcaption{\cite{wohlert2022cellulose}}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/characteristic_directions.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.20\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/model_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.255\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/model_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/model_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.96\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/single_chain_model_periodic_tg.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Structure and models of cellulose nanocrystals.
+    (a) Lattice morphology of cellulose nanocrystals.
+    According to information provided in the literature, a=0.7784 nm, b=0.8201 nm, and the axial crystal size c=1.038 nm.
+    (b) Cross-sectional arrangement and hydrogen bond configuration of cellulose nanocrystals.
+    Cellulose nanocrystals have a special sheet structure.
+    (c) Three characteristic directions of the cellulose nanocrystal cross-section and the corresponding three periodic models established (vertical, horizontal, and slant arrangements).
+    Considering that it is difficult to apply shear loading in molecular dynamics, models with different arrangement directions were constructed, and the same vertical tensile loading was applied.
+    (d) Model of a single periodic cellulose chain.
+    The models for the three arrangement directions are all composed of parallel periodic chains with a degree of polymerization of 10, each chain consisting of alternating residues.
+    }
+    \label{fig:cellulose_nanocrystal_structure_and_models}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.20\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/relaxation_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.255\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/relaxation_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/relaxation_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/relaxation_rmsd_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/relaxation_rmsd_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/relaxation_rmsd_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.20\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/fracture_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/fracture_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/fracture_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_hydrogen_bond_number_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_hydrogen_bond_number_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_hydrogen_bond_number_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Relation and fracture of cellulose nanocrystals.
+    (a) Structures of vertical, horizontal, and slant-arranged cellulose nanocrystal models after energy minimization and relaxation.
+    (b) RMSD curves during the relaxation process. The relaxation process imposes position constraints on heavy atoms such as carbon and oxygen, which are released in four stages.
+    The structures after relaxation and the RMSD curves indicate no significant structural changes, with only layer sliding appearing in the vertical model.
+    (c) Fracture structures of the vertical, horizontal, and slant-arranged models.
+    The vertical and horizontal models exhibit brittle fracture, while the slant model shows shear failure characterized by frictional sliding.
+    (d) Changes in the number of hydrogen bonds during the tensile process. Hydrogen bonds play a vital role in the vertical model.
+    }
+    \label{fig:cellulose_nanocrystal_relaxation_and_fracture}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_stress_strain_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_stress_strain_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_stress_strain_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strain_energy_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strain_energy_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strain_energy_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_energy_coul_sr_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_energy_coul_sr_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_energy_coul_sr_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_energy_lj_sr_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_energy_lj_sr_horizontal.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_energy_lj_sr_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Stress, strain energy, and potential energy during the tension of cellulose nanocrystals.
+    (a) Stress-strain curves and (b) strain energy curves during the tension of the vertical, horizontal, and slant-arranged models.
+    The dominant interactions in the vertical and horizontal models are hydrogen bonding and van der Waals forces, respectively;
+    thus, the vertical model has the highest tensile strength. The slant model, subjected to shear failure, possesses the highest toughness.
+    (c) Electrostatic potential energy curves and (d) van der Waals potential energy curves during the tension of the vertical, horizontal, and slant models.
+    The curves shown are changes relative to their respective minimum values, or effectively, the zero potential energy surface is set at the lowest potential energy state.
+    During the tension of the vertical model, the electrostatic potential energy increases while it decreases in the other models, corresponding to the dominant role of hydrogen bonding in the vertical arrangement.
+    Although the van der Waals potential energy increases in all three models, the magnitude of the increase follows: slant model > vertical model > horizontal model, corresponding to the frictional sliding phenomenon in the slant model.
+    Comprehensive analysis shows that even in the vertical model where electrostatic interaction dominates, the contribution of van der Waals interaction to strain energy remains important.
+    }
+    \label{fig:cellulose_nanocrystal_stretch_stress_and_energy}
+\end{figure}
+
+The introduction also mentioned that in the axial direction dominated by covalent bonds, the elastic modulus of cellulose nanocrystals can reach 100-200 GPa, indicating very high strength; the cross-section, dominated by non-covalent interactions, is the focus of this work.
+The cross-section of cellulose nanocrystals exhibits a unique orthotropic structure, corresponding to three different characteristic directions: along the hydrogen-bonded sheets, perpendicular to the hydrogen-bonded sheets, and inclined to the hydrogen-bonded sheets.
+Due to the limitations of loading methods in molecular dynamics simulations, rather than applying different loading directions to the same model, three models representing the three characteristic directions were constructed and will be subjected to the same vertical loading.
+Each of the three models consists of periodic chains, with each chain having a degree of polymerization of 10 and a length of approximately 5 nm.
+The models for the three characteristic directions are named vertical, horizontal, and slant models based on the orientation of their hydrogen-bonded sheets. Previous slant loading was often directed at the shear loading of cellulose nanocrystals in a brick-like axial arrangement.
+
+The simulation software GROMACS and the CHARMM36 force field  were used in the modeling process. Specific force field description files were generated by the CHARMM-GUI tool.
+XYZ three-way periodic boundary conditions (Periodic Boundary Condition) and the isothermal-isobaric ensemble NPT ensemble (target pressure of 0.1 MPa, i.e., one atmosphere) were used.
+Vertical tensile loading was applied to the three characteristic direction models through box deformation (Deform).
+The specific simulation process was: energy minimization -> relaxation -> vertical tensile loading. During the relaxation process, heavy atoms such as carbon and oxygen were subjected to position constraints, which were gradually relaxed in four stages until complete release.
+
+As shown in Figure 2-2, the structures of the three arrangement models did not undergo significant changes after energy minimization and relaxation.
+The presented models were processed for periodicity using the "nojump" method, meaning the coordinates of atoms do not change significantly relative to the initial structure by crossing periodic boundaries.
+Therefore, the sliding of sheets in the vertical and horizontal models corresponds to actual displacement rather than display issues; this phenomenon also helps explain that the van der Waals interaction between sheets of cellulose nanocrystals is weaker than the hydrogen bonding within the sheets.
+The RMSD curves during relaxation quantitatively demonstrate the structural stability during the process.
+Figure 2-2 also shows the fracture structures and hydrogen bonding during the 10.0 nm/ns vertical tension for the three arrangement directions.
+The vertical and horizontal models exhibit the expected brittle fracture behavior, while significant relative sliding between layers occurred in the slant model, leading to a rotation of the overall crystal sheets after sliding.
+In subsequent sections, this phenomenon will be referred to as frictional sliding.
+During the tensile loading of the three models, the number of hydrogen bonds in the horizontal model did not change significantly (the number of hydrogen bonds shown is the change relative to each minimum for comparison),
+while a significant decrease in hydrogen bonds was observed in the vertical and slant models involving sheet fracture, reflecting the close correlation between hydrogen bonds and mechanical behavior.
+However, the number of hydrogen bonds in the slant model gradually recovered after the decrease, which should be related to the hydrogen bond network reconstruction during the frictional sliding of the slant model, which also explains the higher toughness of the slant model from another perspective.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_5.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_7.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_8.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_9.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_19.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_20.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_frame_slant_21a.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/direction_angle_atom.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/direction_angle_definition.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.40\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_direction_angle_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Frictional sliding in the slant-arranged model of cellulose nanocrystals.
+    (a)(b) Keyframes of the frictional sliding phenomenon in the slant-arranged cellulose nanocrystal model.
+    Relative frictional sliding between adjacent sheets is an important failure phenomenon in the slant model.
+    (c) Definition of the direction angle and the direction angle curve during the tension of the slant model.
+    To quantitatively characterize the frictional sliding and the resulting rotation in the slant model, a direction angle was introduced and defined as the projection angle of the vector formed by carbon atoms on both sides of the cellulose residue ring.
+    The average of all residue direction angles serves as the direction angle for the entire model.
+    The direction angle curve effectively illustrates the frictional sliding and rotation of the model.
+    The final recovery corresponds to the rebound after fracture.
+    }
+    \label{fig:cellulose_nanocrystal_stretch_frictional_sliding_and_direction_angle}
+\end{figure}
+
+The specific data for stress, strain energy, and potential energy during the tension of the vertical, horizontal, and slant models are shown in Figure 2-3.
+From the perspectives of strength (maximum stress) and strain energy (maximum strain energy), the simulation data correspond to the strength of hydrogen bonding and van der Waals interactions.
+The strength of the vertical model, where hydrogen bonding plays a dominant role also corresponds to the highest strength among the three arrangements;
+meanwhile, the slant arrangement model, affected by both hydrogen bonding and van der Waals interactions, exhibits the unique frictional sliding phenomenon, possessing the highest toughness and ductility despite having lower strength.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_stress_strain_collection_vertical_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_stress_strain_collection_horizontal_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_stress_strain_collection_slant_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strain_energy_collection_vertical_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strain_energy_collection_horizontal_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strain_energy_collection_slant_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_strength_with_speed.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_i/stretch_toughness_with_speed.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Changes in mechanical properties of cellulose nanocrystals with loading speed.
+    (a) Stress-strain curves and corresponding maximum stress distributions for vertical, horizontal, and slant models under 100 repeated calculations at 10.0 nm/ns.
+    (b) Strain energy curves and corresponding maximum strain energy distributions for vertical, horizontal, and slant models under 100 repeated calculations at 10.0 nm/ns.
+    (c) Changes in mechanical properties of vertical, horizontal, and slant models with loading speed. Each data point represents the mean plus or minus one standard error.
+    Except for 0.1 nm/ns, which was only repeated 10 times, all other loading speed data are results of 100 repeated calculations, with distributions similar to those at 10.0 nm/ns.
+    The data indicate that within the considered range, the mechanical properties of the nanocrystals do not change significantly with loading speed.
+    }
+    \label{fig:cellulose_nanocrystal_stretch_collection_and_speed_dependency}
+\end{figure}
+
+The dominant role of electrostatic interaction in the vertical arrangement model is further illustrated in the specific potential energy data (the potential energy given is the change relative to the respective minimums for easier comparison).
+Comparing the changes in electrostatic potential energy during tension across the three models, the vertical model is the case where potential energy is increased, meaning the electrostatic interaction only acts to hinder tension in the vertical arrangement model.
+Additionally, an increase in van der Waals potential energy can be noted in all three arrangement models, with the slant model showing the largest increase, which is related to its toughness.
+
+Regarding the unique frictional sliding phenomenon in cellulose nanocrystals, Figure 2-4 provides keyframes illustrating the phenomenon.
+Frictional sliding in the slant model begins with the fracture of one layer of cellulose nanocrystals; after the fracture, significant relative sliding between the crystals on both sides of the fault can be observed, and the fractured sheets may even reconnect with lateral misalignment.
+Corresponding to this is the rotation of the overall sheet structure.
+To quantitatively describe the rotation of cellulose nanocrystals, we defined a physical quantity called the direction angle (Figure 2-4).
+When calculating the direction angle, the angle between the horizontal axis and the projection of the vector formed between two carbon atoms on both sides of a cellulose ring onto the cross-section is taken, with values restricted to the range $[0, \pi)$.
+Based on this physical quantity, the frictional sliding phenomenon in the slant model of cellulose nanocrystals is fully and quantitatively explained.
+The recovery at the end of the direction angle-strain curve corresponds to the rebound after the slant arrangement fractures.
+
+Subsequently, to reduce the impact of individual cases and simulation randomness and to consider the effect of loading speed, multiple repeated simulations were performed for each of the three arrangement models at several loading speeds, and loading curves for the cellulose nanocrystals were plotted.
+The loading speeds considered include  0.1 nm/ns, 1.0 nm/ns, 2.0 nm/ns, 4.0 nm/ns, 10.0 nm/ns, 20.0 nm/ns, and 40.0 nm/ns.
+The number of repeated simulations at 0.1 nm/ns was 10, while for all other speeds, it was 100.
+Taking the stress-strain curves and strain energy curves of 100 tensile processes at 10.0 nm/ns as an example, the loading performance of cellulose nanocrystals in the three characteristic directions is relatively stable;
+the brittleness of the vertical and horizontal models and the toughness of the slant model were all confirmed through repeated simulations.
+Synthesizing the strength and toughness performance across different loading speeds, it can be confirmed that within the range of loading speeds considered, the mechanical properties of cellulose nanocrystals are stable and do not change significantly with loading speed.
+
+\subsubsection{Tensile Mechanical Properties of Type II Cellulose Nanocrystals}\indent
+
+In this paper, cellulose nanocrystals by default refer to Type I cellulose nanocrystals widely existing in plants.
+Another widely existing cellulose nanocrystal configuration with better thermal stability is called Type II.
+According to the data measured by Paul Langan et al. using X-ray technology [309], the three characteristic dimensions of the Type II cellulose nanocrystal lattice are a=0.810 nm, b=0.903 nm, and c=1.031 nm.
+Within the cross-section of the nanocrystal, the angle between the transverse and longitudinal sides of the lattice is 117.10$^{\circ}$.
+In addition to the lattice dimensions, Type II cellulose nanocrystals have another significant difference from Type I: the orientation of the cellulose residues.
+In Type I cellulose nanocrystals, all side chains of the cellulose residues point in one direction and are all of the tg type; whereas in Type II nanocrystals, the tg and gt types are arranged alternately.
+Corresponding to Figure 2-4, the side chains corresponding to the gt type point to the right, while those of the tg type point to the left.
+The core difference between gt and tg types lies in the arrangement pattern of hydrogen bonds between side-chain hydroxyl groups; the gt type can form more intrachain hydrogen bonds, while the tg type emphasizes interchain hydrogen bonds.
+Under the influence of significantly different microstructures, the mechanical properties of cellulose nanocrystals naturally differ.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/lattice_dimensions.png}
+        \hspace{4.0pt}
+        \subcaption{\cite{langan2001x}}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.64\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/cellulose_hydrogen_bonding_pattern_ii.png}
+        \subcaption{\cite{wohlert2022cellulose}}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/characteristic_directions.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/model_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/model_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.96\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/single_chain_model_periodic_tg.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.96\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/single_chain_model_periodic_gt.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Structure and models of Type II cellulose nanocrystals.
+    (a) Lattice morphology of Type II cellulose nanocrystal.
+    According to the information provided in the literature, a=0.810 nm, b=0.903 nm, and axial crystal size c=1.031 nm.
+    (b) Cross-sectional arrangement and hydrogen bond configuration of Type II cellulose nanocrystal.
+    Cellulose nanocrystals have a special lamellar structure.
+    (c) Two characteristic directions of the Type II cellulose nanocrystal cross-section and the corresponding established periodic models of two alignment directions (vertical and slanted).
+    Considering that it is difficult to apply shear loading in molecular dynamics, models with different alignment directions were constructed, and the same vertical tensile loading was applied.
+    (d) Model of a single periodic Type II cellulose chain.
+    The three alignment models are all composed of parallel arrangements of periodic chains with a degree of polymerization of 10, each chain being composed of residues arranged alternately.
+    As shown in Figure (a), Type II cellulose nanocrystals are composed of two types of cellulose with different side-chain orientations;
+    the tg type is the same as Type I (side-chain pointing left), while the other gt type has the opposite side-chain orientation.
+    The gt type focuses more on side-chain hydrogen bonds and has fewer intrachain hydrogen bonds.
+    }
+    \label{fig:cellulose_nanocrystal_ii_structure_and_models}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/relaxation_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/relaxation_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/fracture_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/fracture_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/fracture_slant_tough.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_hydrogen_bond_number_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_hydrogen_bond_number_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_hydrogen_bond_number_slant_tough.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Relaxation and fracture of Type II cellulose nanocrystals.
+    (a) Structures of vertical and slanted alignment cellulose nanocrystal models after energy minimization and relaxation.
+    (b) Fracture structures of vertical and slanted alignment models.
+    The vertical alignment model shows brittle fracture, while the slanted alignment model undergoes structural reorganization during the stretching process,
+    eventually forming a lamellar structure similar to Type I, with a certain probability of forming a fracture structure highly similar to the slanted alignment model of Type I.
+    (c) Changes in the number of hydrogen bonds during the stretching process.
+    The failure of both alignments involves the breaking of hydrogen bonds.
+    }
+    \label{fig:cellulose_nanocrystal_ii_relaxation_and_fracture}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_stress_strain_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_stress_strain_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_stress_strain_slant_tough.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strain_energy_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strain_energy_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strain_energy_slant_tough.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_energy_coul_sr_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_energy_coul_sr_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_energy_coul_sr_slant_tough.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_energy_lj_sr_vertical.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_energy_lj_sr_slant.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_energy_lj_sr_slant_tough.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Stress, strain energy, and potential energy during the stretching process of Type II cellulose nanocrystals.
+    (a) Stress-strain curves and (b) strain energy curves during the stretching of vertical and slanted alignment models.
+    The third set of data corresponds to the case where the slanted model exhibits a fracture structure similar to Type I.
+    The dominant role in the vertical model is hydrogen bonding, so the vertical model has higher tensile strength.
+    The slanted model undergoing structural reorganization has higher toughness.
+    (c) Electrostatic potential energy curves and (d) Van der Waals potential energy curves during the stretching of vertical and slanted alignment models.
+    The provided curves represent the change relative to their respective minimum values, or in other words, the zero potential energy level is set to the lowest potential energy state.
+    During the stretching of the vertical model, the electrostatic potential energy increases more while the Van der Waals potential energy increases less, corresponding to the dominant role of hydrogen bonding in the vertical alignment model.
+    Comprehensive analysis shows that in Type II cellulose nanocrystals, both electrostatic and Van der Waals interactions contribute significantly to the strain energy.
+    }
+    \label{fig:cellulose_nanocrystal_ii_stretch_stress_and_energy}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_vertical_8.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_vertical_9.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_vertical_10.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.24\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_vertical_11.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_14.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_15.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_41.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_54.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_tough_0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_tough_24.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_tough_48.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_tough_96.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_21.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_24.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_52.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_72.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_tough_0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_tough_41.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_tough_122.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_frame_slant_square_tough_162.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Failure modes of Type II cellulose nanocrystals.
+    (a) Key frames of misalignment in the vertical alignment model.
+    The fracture of the vertical alignment model is not a simple brittle fracture; there is also misalignment perpendicular to the loading direction.
+    (b) (c) Key frames of the slanted alignment model.
+    Following the destruction of the previous crystal structure, the structure of the slanted alignment model reorganizes into a lamellar arrangement similar to Type I.
+    A higher degree of reorganization in (c) corresponds to an overall twisting of the structure at the beginning of deformation rather than localized cracking.
+    (d) (e) Key frames of a larger-sized slanted alignment model.
+    Considering the uniqueness of this failure mode, a larger-sized model was used for simulation and verification.
+    The structural reorganization phenomenon still exists in the larger model.
+    }
+    \label{fig:cellulose_nanocrystal_ii_stretch_transformation}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_stress_strain_collection_vertical_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_stress_strain_collection_slant_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_stress_strain_collection_slant_square_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strain_energy_collection_vertical_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strain_energy_collection_slant_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strain_energy_collection_slant_square_10.0.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_strength_with_speed.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_ii/stretch_toughness_with_speed.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Mechanical properties of Type II cellulose nanocrystals as a function of loading speed.
+    (a) Stress-strain curves and corresponding maximum stress distributions for vertical, slanted, and larger-sized slanted alignment models under 100 repeated calculations at 10.0 nm/ns.
+    (b) Strain energy curves and corresponding maximum strain energy distributions for vertical, slanted, and larger-sized slanted alignment models under 100 repeated calculations at 10.0 nm/ns.
+    (c) Changes in mechanical properties of vertical and slanted alignment models with loading speed.
+    Considering the high dispersion of the stress-strain curves for the slanted alignment model, simulation data from the larger size was used for the slanted model.
+    Each data point represents the mean plus or minus one standard error.
+    Except for 0.1 nm/ns, which was repeated only 10 times, all other loading speed data are results of 100 repetitions, and their distributions are similar to the data at 10.0 nm/ns.
+    The data shows that within the range considered, the mechanical properties of Type II nanocrystals do not change significantly with loading speed.
+    }
+    \label{fig:cellulose_nanocrystal_ii_stretch_collection_and_speed_dependency}
+\end{figure}
+
+cellulose nanocrystals do not have a significant lamellar structure and have two characteristic directions, corresponding to the established vertical and slanted alignment models respectively.
+For the constituent cellulose chains, the gt type with a different side-chain orientation was added to the tg type used in Type I.
+
+Next, the models for the two characteristic alignment directions of Type II nanocrystals were subjected to the same energy minimization -> relaxation -> vertical stretching process as Type I.
+The relaxation simulation process also used position constraints on heavy atoms such as carbon and oxygen, gradually releasing the constraints in four stages until complete release.
+After energy minimization and relaxation, the structure still did not change significantly.
+The stretching process is significantly different from Type I cellulose nanocrystals:
+first, the fracture morphology and corresponding mechanical properties are different; second, the stability of the mechanical properties of Type II nanocrystals is slightly lower.
+The slanted alignment model of Type II nanocrystals can undergo less structural change, exhibiting lower toughness morphology and performance, or it can undergo more structural change, exhibiting higher toughness morphology and performance.
+The randomness in the performance of Type II cellulose nanocrystals is much stronger than that of Type I nanocrystals.
+The fracture morphology with higher toughness is similar to the slanted alignment fracture morphology of Type I cellulose nanocrystals; that is, during the stretching process, the structure of Type II cellulose crystals transforms into a lamellar structure similar to Type I cellulose nanocrystals.
+This is a previously unreported phenomenon of configuration transition in cellulose nanocrystals mediated by mechanical loading.
+Subsequent models containing solvent will further illustrate that the mechanical properties of Type II cellulose nanocrystals, especially the unique configuration transition phenomenon of the slanted alignment model, have requirements for structural periodicity.
+Non-periodic Type II cellulose nanocrystals do not easily exhibit strong toughness and special configuration transition properties.
+Figure 2-7 also shows the changes in the number of hydrogen bonds during the stretching of Type II cellulose nanocrystals.
+The fracture behavior of Type II cellulose nanocrystals in characteristic directions is related to the destruction of hydrogen bonds; thus, a decrease in the number of hydrogen bonds can be observed in both vertical and slanted alignment models (as well as the more tough morphology in the slanted alignment model). 
+
+Specifically regarding the tensile data of Type II cellulose nanocrystals (Figure 2-8), the vertical alignment model of cellulose nanocrystals is also dominated by hydrogen bonding, possessing higher strength than the slanted model, which corresponds to a greater increase in electrostatic potential energy.
+However, the slanted alignment model capable of structural reorganization clearly has higher toughness, with a greater increase in Van der Waals potential energy.
+In Type II nanocrystals, both electrostatic and Van der Waals interactions play important roles in resisting loading.
+
+Figure 2-9 provides key frames of the fracture process for vertical and slanted alignment models.
+For the Type II vertical model, its brittle fracture behavior includes a component of shear action, where vertical stretching and horizontal misalignment of the structure are coupled; the fracture structure of the slanted model also shows two cases with lower degrees of structural rearrangement.
+From the perspective of structural deformation, the difference between the cases of lower and higher structural rearrangement in the slanted model lies in whether the structure change at the beginning of deformation manifests as cracking in partial areas or overall twisting;
+the subsequent structural reorganization and toughness corresponding to the two cases are different.
+However, in both cases, the subsequent structure will rearrange into an alignment with a lamellar structure.
+This special deformation was also confirmed in larger-sized models.
+
+Considering the uniqueness of the mechanical properties of the Type II nanocrystal slanted alignment model, subsequent tests were performed on vertical and slanted alignment models stretching was performed 100 times each for the vertical, slanted, and larger-sized slanted models,
+and the strength and toughness at different loading speeds were compared (the slanted performance used data from the larger model with less randomness), as shown in Figure 2-10.
+
+The brittleness of the vertical alignment model and the ductility in the slanted alignment model were confirmed through multiple repeated simulations.
+By comparison, the stress-strain and strain energy curves of the larger slanted alignment model are more stable.
+Then, six loading speeds (0.1 nm/ns, 1.0 nm/ns, 4.0 nm/ns, 10.0 nm/ns, 20.0 nm/ns, and 40.0 nm/ns) were considered for the mean and standard error of strength and toughness.
+At 0.1 nm/ns, each model was repeatedly loaded 10 times; for the other speeds, each model was repeatedly loaded 100 times repeated loading.
+The mechanical properties of Type II cellulose nanocrystals also showed no significant change within the range of speeds considered.
+The uniqueness of the Type II slanted alignment model lies in its ability to exhibit two different fracture morphologies, eventually transforming into a lamellar structure similar to Type I.
+This special configuration transformation morphology depends on structural periodicity, which will be explained in the subsequent solvent-containing structures.
+
+\subsubsection{Toughening Mechanism Guided by Orthotropic Anisotropy}\indent
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_36.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_81.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_144.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_324.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_576.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_1296.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_2304.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/model_4096.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_36.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_81.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_144.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_324.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_576.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_1296.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_2304.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/fracture_4096.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/stretch_strength_with_size.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/stretch_toughness_with_size.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/stretch_direction_angle_with_size.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Variation of cellulose nanocrystal performance with size.
+    (a) Cellulose nanocrystals of different sizes.
+    Considered here are cellulose nanocrystals with the same number of rows and columns calculated in units of cellulose chains, such as 6$\times$6 and 12$\times$12 nanocrystals.
+    Specifically considered sizes are 6, 9, 12, 18, 24, 36, and 64.
+    (b) Fracture morphology of nanocrystals of different sizes.
+    From the fracture structure, it can be directly observed that as the nanocrystal size increases, ductility tends to decrease.
+    (c) Changes in strength, toughness, and direction angle with nanocrystal size. As the size increases, strength, toughness, and direction angle show a decreasing trend.
+    }
+    \label{fig:cellulose_nanocrystal_size_dependency}
+\end{figure}
+
+According to data provided by Robert Sinko et al. [121], the mechanical properties of cellulose nanocrystals are  closely related to the size of the nanocrystals.
+When the crystal size reaches a certain point, the performance of cellulose nanocrystals tends to stabilize.
+Our simulation results confirm this point as well.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/stretch_delta_coul_sr_energy_density_with_size.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_nanocrystal_different_size_i/stretch_delta_lj_sr_energy_density_with_size.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Variation of cellulose nanocrystal potential energy density with size.
+    (a) Changes in electrostatic potential energy density and (b) Van der Waals potential energy  density as a function of nanocrystal size.
+    The change in potential energy density is defined as the ratio of the change during the stretching process relative to the crystal size after relaxation and before stretching, i.e., the potential energy change per unit volume.
+    As the size of the nanocrystal increases, the change in potential  energy density during the stretching process gradually decreases and levels off, especially for the Van der Waals interaction resisting tension.
+    From a structural  perspective, larger nanocrystals have a stronger ability to maintain their structure.
+    Even though friction-slip is common, in larger nanocrystals, the parts outside the relative slip and fracture interfaces can maintain a state closer to the crystal, unlike the significant structural changes seen in the smallest 6$\times$6 crystals.
+    Inferring from the potential energy change density, the damage to cellulose nanocrystals is more of a local interaction at the relative friction and fracture interfaces, therefore the energy density change during stretching does not change linearly with the crystal volume.
+    Here, the size of the nanocrystal varies approximately with the second power of the size, while the size and potential energy of the friction-slip interface vary with a lower-order power;
+    thus, the performance of cellulose nanocrystals weakens as the volume increases.
+    }
+    \label{fig:cellulose_nanocrystal_delta_energy_density_with_size}
+\end{figure}
+
+As shown in Figure 2-11, the tensile mechanical properties of various sizes of cellulose nanocrystals change with crystal size;  strength, toughness, and orientation angle all tend to level off as the size of the cellulose nanocrystal increases. The cellulose nanocrystals considered here are those with the same length and width in terms of row and column size, such as 6x6 nanocrystals  and 12x12 nanocrystals. Robert Sinko et al. used RMSF (Root Mean Square Fluctuation) to explain the variation of mechanical properties of cellulose nanocrystals with size. Here, we use  the potential energy change density to explain the mechanical properties of cellulose nanocrystals. The potential energy change density here refers to the ratio of the  change in potential energy to the volume of the cellulose nanocrystal before stretching, i.e., the amount of potential energy change per unit volume. As the cellulose nanocrystal size increases, the absolute value of the potential energy change density during the stretching process tends to decrease,  especially the potential energy density of the Van der Waals interaction resisting tension. This matches our qualitative explanation of the stretching process.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/transverse_arrangement_pattern_symmetric.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/transverse_arrangement_pattern_cross.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/model_symmetric_36x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/model_symmetric_81x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/model_symmetric_144x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Cross-sectional arrangement of cellulose nanocrystals.
+    (a) Two cross-sectional arrangement modes of cellulose nanocrystals: symmetric and  cross-type.
+    The symmetric arrangement is inspired by twin structures, and the cross-type is a further symmetrical arrangement.
+    The performance of the two arrangement modes differs in the vertical and  horizontal directions.
+    (b) Cross-sectional arrangement of unit crystal blocks of different sizes.
+    When considering cross-sectional arrangement modes, the influence of the unit crystal size on the structure is also considered.
+    The symmetric arrangement shown in the figure can be viewed as an arrangement of four unit nanocrystals; structures formed by different sizes of unit nanocrystals have different performance.
+    The unit nanocrystals considered here include 6x6, 9x9, and 12x12 unit crystals.
+    }
+    \label{fig:cellulose_nanocrystal_transverse_arrangement_patterns}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_36x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_81x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_144x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_horizontal_36x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_horizontal_81x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_horizontal_144x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_36x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_81x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_144x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_horizontal_36x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_horizontal_81x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_horizontal_144x4.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Fracture morphology of cellulose nanocrystal cross-sectional arrangements.
+    (a) Fracture morphology of symmetrical arrangements under vertical and lateral loading.
+    The laterally loaded structures have been rotated counter-clockwise, including cases with unit cell sizes of 6$\times$6, 9$\times$9, and 12$\times$12 rows and columns.
+    Symmetrical arrangements exhibit better toughness and ductility under vertical loading but are weaker when subjected to lateral loading.
+    (b) Fracture morphology of staggered arrangements under vertical and lateral loading.
+    Staggered arrangements exhibit good toughness and ductility under both vertical and lateral loading, serving as an effective toughening mechanism.
+    In both symmetrical and staggered structures, the frictional sliding of each part is hindered, causing local rotation to become the dominant deformation mechanism, which results in improved toughness and ductility.
+    }
+    \label{fig:cellulose_nanocrystal_transverse_arrangement_fractures}
+\end{figure}
+
+The special fracture behavior of the oblique alignment model of cellulose nanocrystals is a local deformation morphology of friction-slip between lamellae.
+Specifically for the cellulose nanocrystals we studied, the volume and overall potential energy vary approximately with the second power of the side length, but the size and potential energy of the interfaces on both sides of the friction-slip vary with a lower-order power.
+Correspondingly, the potential energy change per unit volume during the stretching process gradually decreases as the model size increases, and the corresponding mechanical properties will also decrease at a decaying rate until they level off.
+
+Considering the characteristic that the performance of cellulose nanocrystals varies with size, we propose to consider the influence of the lateral arrangement of cellulose nanocrystals on the overall mechanics,
+believing that a structure formed by splicing smaller unit structures in a certain arrangement may have better performance than a single larger-sized cellulose nanocrystal.
+
+Inspired by twin structures, we proposed a symmetric arrangement mode and a further cross-arrangement mode (Figure  2-13).
+These two arrangement models have differences in structure and mechanical properties in the horizontal and vertical directions;
+and based on the correlation between the mechanical properties and size of cellulose nanocrystals, models considering different sized constituent unit nanocrystals were constructed.
+
+The mechanical properties of the oblique alignment model of Type II cellulose nanocrystals significantly depend on periodicity (this point will be explained in the simulation containing solvent);
+otherwise, it is difficult to exhibit good toughness, and it is not used to consider the influence of cross-sectional arrangement.
+The specific unit crystal sizes considered include 6x6, 9x9, and 12x12.  Four units are arranged to form the final structure.
+The fracture morphology of the arranged structure is shown in Figure 2-14.
+
+Simulation results show that symmetric and cross-type cross-sectional arrangements can indeed improve the ductility of the structure, also influenced by the size of the constituent units.
+In symmetric and cross-type arrangements, the friction-slip phenomenon of cellulose nanocrystals is hindered, and local rotation replaces it as the dominant deformation phenomenon.
+Structures subjected to lateral loading underwent counter-clockwise rotation.
+The internal interfaces of symmetric and cross-type arrangements are weaker in the horizontal direction, correspondingly, the ductility when subjected to lateral loading is also worse, especially for the symmetric arrangement.
+In summary, the cross-type arrangement has better ductility when subjected to both vertical and lateral loading, which is a good toughening mechanism.
+The ductility of the arranged structure is also significantly related to the size of the constituent unit nanocrystals; the structure formed by 6x6 constituent units has better ductility.
+Specific quantitative performance comparisons between each arrangement and the crystal arrangement structure of the same size are given in Figure 2-15.
+
+In order to reduce the influence of manual settings on the simulation results, more arranged structures were constructed and load-tested.
+The arranged structure tested in the previous paragraph contains 4 unit crystals; the structure introduced in this paragraph contains 16 unit crystals (Figure 2-15).
+With a larger number of arrangements, the local rotation phenomenon replacing the hindered friction-slip still exists.
+Because the interfacial interaction strength between constituent units is weak in cross-sectional arranged structures, when the number of spliced units increases, the arranged structure is significantly affected by the size of the unit crystals.
+Integrating the two types of arrangement quantities in the simulation structures, using smaller-sized cellulose nanocrystals for cross-type arrangement, rather than forming a single larger nanocrystal, is an effective toughening method.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_36x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_81x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_144x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_horizontal_36x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_horizontal_81x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_symmetric_horizontal_144x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_36x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_81x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_144x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_horizontal_36x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_horizontal_81x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.12\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/fracture_cross_horizontal_144x16.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Fracture morphology of more cellulose nanocrystal cross-sectional arrangements.
+    (a) Fracture morphology of symmetric arrangement under vertical and horizontal loading.
+    Unit nanocrystal size remains unchanged while the splicing quantity increases.
+    As the ribbon grows, the ability of symmetric arrangement to improve toughness and ductility decreases significantly.
+    (b) Fracture morphology of cross-type arrangement under vertical and horizontal loading.
+    When the weak interface of the unit nanocrystals leads to an increase in the splicing quantity, the ability of the cross-type arrangement to improve toughness and ductility significantly depends on the size of the unit nanocrystals.
+    Comprehensive analysis shows that using smaller unit nanocrystals for cross-type arrangement, breaking up the nanocrystals, is an effective toughening mechanism.
+    }
+    \label{fig:cellulose_nanocrystal_more_transverse_arrangement_fractures}
+\end{figure}
+
+Figure 2-16 provides quantitative data on the influence of arrangement mode and loading direction on strength and toughness, correspondingly giving reference data for crystals of the same size.
+These data confirm the previous conclusions based on simulated structures.
+Compared to nanocrystal models of the same size, the strength of symmetric and cross-type arranged structures decreases, but significantly improved toughness can be obtained in the case of smaller constituent units.
+With further technological development, the cross-sectional arrangement of cellulose nanocrystals should receive more attention in material design.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/stretch_strength_with_pattern.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/stretch_toughness_with_pattern.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/stretch_strength_with_pattern_larger.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_transverse_arrangement_i/stretch_toughness_with_pattern_larger.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Mechanical properties of cellulose nanocrystal cross-sectional arrangements.
+    (a) Strength and (b)  toughness of cellulose nanocrystal cross-sectional arrangements.
+    (c) Strength and (d) toughness of more cross-sectional arrangements.
+    By comparing with crystal models of corresponding sizes, it is clear that both symmetric and cross-type arrangements will reduce the strength to some extent,
+    but the toughness of the model can be improved by using smaller unit nanocrystals for the arrangement.
+    }
+    \label{fig:cellulose_nanocrystal_transverse_arrangement_performance_with_pattern}
+\end{figure}
+
+\subsubsection{Summary of this Chapter}\indent
+
+The main content of this chapter is the anisotropic structure and mechanical properties of Type I and Type II cellulose nanocrystals.
+Based on the structural parameters measured in the structure, structural models of Type I and Type II nanocrystals were constructed accordingly.
+In the cross-section, the cellulose nanocrystals are parallel arrangements of cellulose chains, containing 10 cellulose residues along the chain direction.
+The constructed models are all periodic structures in the xyz directions.
+The dominant interaction along the cellulose nanocrystal chain is covalent bonding, which also possesses the highest elastic modulus (up to 100-200 GPa) and strength.
+Axial performance dominated by covalent bonds  has been widely studied experimentally and by simulation, and the degree of mutual agreement between data is very high.
+Additionally, cellulose  nanocrystals, as densely packed structures, are also very difficult to damage under compression.
+Therefore, this thesis focuses on the tensile mechanical properties of cellulose nanocrystals within the cross-section.
+
+Type I nanocrystals have a unique lamellar orthotropic structure, so Type I nanocrystals have three characteristic directions in the cross-section: along the lamellae, perpendicular to the lamellae, and oblique to the lamellae.
+Considering the difficulty of implementing shear loading, models with three alignment directions were constructed, and vertical tensile loading was applied uniformly.
+The structure of Type II nanocrystals is a general anisotropic structure and does not have a truly lamellar or layered structure; only two characteristic directions------along the lamellae and perpendicular to the lamellae------were considered.
+
+Hydrogen bonds and electrostatic interactions are key factors affecting cellulose nanocrystals, corresponding to the potential energy changes during stretching.
+Hydrogen bonds have higher bond energy compared to Van der Waals interactions and are directional.
+In both Type I and Type II cellulose nanocrystals, the direction along the lamellae has the highest strength, reaching the GPa level; the strength in other directions is several hundred MPa.
+The most noteworthy phenomena are the friction-slip phenomenon exhibited by Type I nanocrystals under oblique loading, and the structural reorganization phenomenon exhibited by Type II nanocrystals under oblique loading.
+Both phenomena significantly enhance the toughness of cellulose nanocrystals.
+Under the influence of the lamellar structure and hydrogen bonds, when Type I nanocrystals are subjected to oblique tension, sliding occurs between lamellae, and the overall structure rotates, resulting in higher toughness.
+During oblique tension, Type II nanocrystals reorganize their structure into a lamellar structure similar to Type I, which can also significantly improve the toughness of the structure.
+However, the structural reorganization and toughness enhancement of Type II cellulose nanocrystals significantly depend on the periodicity of the structure, making it difficult to utilize in subsequent non-periodic scenarios.
+
+The friction-slip phenomenon of Type I nanocrystals under oblique loading is related to the size of the structure.
+Results show that smaller-sized Type I nanocrystals have higher friction-slip phenomena and toughness; the mechanism was explained using the potential energy change per unit volume during stretching.
+In short, the friction-slip phenomenon is mainly affected by local lamellae on both sides of the fracture slip, and the magnitude of the corresponding potential energy increase with size is smaller than the overall potential energy.
+Based on this important conclusion, two cross-sectional arrangement modes, symmetric and cross-type, were proposed.
+The basic idea is to decompose a larger-sized crystal into several smaller-sized crystals, thereby improving the ductility and toughness of the structure.
+
+In conclusion, this chapter has systematically simulated and analyzed the anisotropic structures and mechanical properties of Type I and Type II nanocrystals,
+observing the special friction-slip phenomenon in Type I nanocrystals and the structural reorganization phenomenon in Type II nanocrystals.
+Subsequently, based on the friction-slip phenomenon of Type I nanocrystals, cross-sectional arrangement modes capable of improving structural toughness were proposed.
+
+\subsection{Mechanical Properties of Cellulose Nanocrystals in Solvent Environments}\indent
+
+Following the simulation and analysis of the intrinsic anisotropy of cellulose nanocrystals in the previous chapter, the main work of this chapter is to further consider mechanical properties in solvent environments.
+Under natural conditions (such as cellulose crystals in plants) and non-natural conditions (such as advanced materials like composites prepared artificially), solvents represented by water often coexist with cellulose nanocrystals.
+Considering and analyzing the influence of the solvent environment is very important for understanding cellulose nanocrystals in real environments and can also assist in the development of cellulose-based fibers.
+Referring to relevant literature, eight solvents were selected: DMF (N,N-Dimethylformamide), DMSO (Dimethyl sulfoxide), ethylenediamine, ethanol, isopropanol, methanol, and water, alongside a solvent-free control group.
+In a solvent environment, both the cellulose nanocrystals themselves and the interaction between cellulose and the solvent are important influencing factors.
+Previous studies have often considered solvent effects in a single way without conducting a systematic comparison and summary.
+
+\subsubsection{Mechanical Properties of Nanocrystals Surrounded by Solvents on Both Sides}\indent
+
+When considering the mechanical properties of cellulose nanocrystals in the previous chapter, periodic boundary conditions were used in all three xyz directions.
+Here, the focus is twofold: first, to consider the mechanical properties of cellulose nanocrystals under non-periodic boundary conditions, and second, to consider the impact of solvents on the mechanical properties of cellulose nanocrystals.
+The solvent-surrounded model considered here refers to a model where the overall model still maintains periodic boundary conditions in all three xyz directions, but the left and right sides of the nanocrystal are surrounded by solvents.
+In this model, cellulose nanocrystals use periodic boundary conditions only in the y and z directions.
+
+The specific model and loading process are shown in Figure 3-1.
+The eight solvent condition models are arranged as follows: row one (DMF, DMSO, ethylenediamine, ethanol) and row two (isopropanol, methanol, water, solvent-free control).
+Subsequently, the same vertical strain was applied to these models.
+For the solvent-free control group, pressure control was not performed in the x-direction only, while all other solvent group models were pressure-controlled in the x, y, and z directions.
+
+The solvent-free control group shows that even after the periodicity of the structure is broken, friction sliding remains the primary failure mode for cellulose nanocrystals, and this failure mode persists in the solvent-containing models.
+Although the final failure morphologies are essentially the same, by comparing the intermediate structures during loading,
+it can be observed that small polar molecules (such as ethylenediamine, methanol, and water) have a strong erosive ability on cellulose nanocrystals, capable of promoting the friction sliding phenomenon at the interface.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_dmf_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_dmso_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_eda_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_eta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_ipa_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_mta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_sol_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/model_with_none_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_dmf_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_dmso_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_eda_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_eta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_ipa_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_mta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_sol_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/transition_with_none_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_dmf_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_dmso_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_eda_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_eta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_ipa_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_mta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_sol_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/fracture_with_none_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Models and loading of cellulose nanocrystals surrounded by solvents on both sides.
+    (a) Models surrounded by solvents on both sides, (b) intermediate state of stretching, and (c) final state.
+    This model considers DMF, DMSO, ethylenediamine, ethanol, isopropanol, methanol, water, and a solvent-free control group;
+    the solvent-free control group has no lateral pressure control.
+    Each group has the same tensile strain.
+    The results show that friction sliding remains important in solvent environments.
+    Small polar molecules represented by ethylenediamine (EDA), methanol (MTA), and water (SOL) exhibit strong erosive ability.
+    }
+    \label{fig:cellulose_nanocrystal_with_solvent_around_fracture}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_dmf_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_dmso_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_eda_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_eta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_ipa_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_mta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_sol_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/model_with_none_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_dmf_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_dmso_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_eda_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_eta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_ipa_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_mta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_sol_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/transition_with_none_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_dmf_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_dmso_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_eda_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_eta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_ipa_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_mta_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_sol_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.18\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/fracture_with_none_around.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Models and loading of Type II cellulose nanocrystals surrounded by solvents on both sides.
+    (a) Models surrounded by solvents on both sides, (b) intermediate state of stretching, and (c) final state.
+    In solvent environments, the structural reorganization capability of non-fully periodic Type II nanocrystals decreases significantly.
+    Small polar molecules represented by ethylenediamine (EDA), methanol (MTA), and water (SOL) exhibit strong erosive ability.
+    }
+    \label{fig:cellulose_nanocrystal_ii_with_solvent_around_fracture}
+\end{figure}
+
+As a molecule with a relatively larger size and lacking strong polarity, DMSO has a weaker erosive ability on cellulose nanocrystals and can, to a certain extent, improve their ductility and toughness.
+Specific strength and toughness data are shown in Figure 3-3.
+These simulation data indicate that the size and polarity of solvent molecules are key variables affecting the performance and phenomena of cellulose nanocrystals.
+This is related to the critical influence of hydrogen bonding and electrostatic interactions during the stretching process of cellulose nanocrystals.
+
+Using the same modeling, pressure control, and loading approach, Type II cellulose was subjected to the same treatment and stretching (Figure 3-2).
+The results of the solvent-free control group for Type II nanocrystals show that in non-periodic cases, Type II nanocrystals cannot undergo complex structural reorganization or exhibit correspondingly higher toughness.
+Even so, Type II nanocrystals still form a lamellar alignment structure at the fracture point.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_i/stretch_strength_around_with_solvent.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_with_solvent_around_ii/stretch_toughness_around_with_solvent.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Mechanical properties of cellulose nanocrystals surrounded by solvents on both sides.
+    (a) Changes in strength and (b) toughness of cellulose nanocrystals surrounded by solvents on both sides with respect to solvent and configuration.
+    Overall, Type I crystals exhibit a unique friction sliding phenomenon and have lower strength in this scenario.
+    Small polar molecules represented by ethylenediamine (EDA), methanol (MTA), and water (SOL) exhibit strong erosive ability, corresponding to the lowest structural toughness.
+    Molecules represented by DMSO, which are slightly larger and less polar, can enhance toughness.
+    }
+    \label{fig:cellulose_nanocrystal_with_solvent_around_performance}
+\end{figure}
+
+The intermediate states and fracture structures of Type II nanocrystals surrounded by solvents on both sides shown in Figure 3-2 further illustrate the impact of solvent polarity and size on fracture behavior.
+Ethylenediamine, methanol, water, and the slightly larger isopropanol still exhibit strong erosive ability, capable of promoting lateral dislocation and fracture of Type II nanocrystals in the intermediate structures.
+Molecules represented by DMSO, which are slightly larger in volume and weaker in polarity, still play a role in increasing the ductility of Type II nanocrystals, acting similarly to a protective effect rather than an erosive effect that promotes fracture.
+However, this differs from the phenomena in Type I. As a typical representative of small polar molecules, water molecules did not promote dislocation in Type II nanocrystals; instead, they tended to promote overall structural destruction.
+Therefore, local lateral dislocation was not evident in the intermediate state, and the final fracture structure exhibits more dislocations.
+
+By quantitatively comparing the mechanical properties of Type I and Type II cellulose nanocrystals surrounded by solvents on both sides,
+it was noted that small polar molecules represented by ethylenediamine (EDA), methanol (MTA), and water (SOL) can indeed reduce the toughness during the structural stretching process, while molecules with slightly larger volumes and weaker polarity, represented by DMSO, can increase the structural toughness.
+Overall, under the condition of being surrounded by solvents on both sides, the strength of cellulose nanocrystals is not significantly affected by the solvent. Type I nanocrystals, influenced by their unique friction sliding phenomenon, have lower strength compared to Type II nanocrystals.
+
+\subsubsection{Mechanical Properties of Multi-block Nanocrystal Arrays in Solvent Environments}\indent
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_dmf_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_dmso_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_eda_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_eta_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_ipa_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_mta_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_sol_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_none_1.2.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_dmf_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_dmso_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_eda_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_eta_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_ipa_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_mta_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_sol_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_none_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_dmf_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_dmso_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_eda_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_eta_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_ipa_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_mta_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_sol_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_none_1.4.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_dmf_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_dmso_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_eda_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_eta_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_ipa_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_mta_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_sol_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_none_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_dmf_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_dmso_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_eda_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_eta_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_ipa_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_mta_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_sol_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/model_grid_with_none_1.6.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_dmf_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_dmso_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_eda_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_eta_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_ipa_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_mta_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_sol_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/fracture_grid_with_none_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Alignment structure and loading of cellulose nanocrystals separated by solvents.
+    (a) Model and loading at 1.2x spacing.
+    For one cellulose nanocrystal, a simulation box with length and width both 1.2 times the crystal size was established, solvent molecules were added to the gaps, and a 2x2 grid of these units was formed to create the final model.
+    This model considers DMF, DMSO, ethylenediamine, ethanol, isopropanol, methanol, water, and a solvent-free control group, all under pressure control and subjected to the same loading strain.
+    (b) Models and loading at 1.4x spacing and (c) 1.6x spacing.
+    Combining the simulation results of the three spacings, it is evident that the mechanical properties of the structure are related to molecular size and polarity.
+    For relatively large DMF and DMSO, the addition of a small amount of solvent disrupts the crystal structure, leading to better ductility;for smaller water molecules, a small amount of addition can also erode the crystal structure.
+    When the solvent amount is large (such as at 1.6x spacing), the mechanical properties of the structure are determined by the solvent interface between the two rows of nanocrystals, and the nanocrystals themselves are not destroyed.
+    When the solvent amount is sufficient, DMF, DMSO, and water, which previously destroyed the crystal structure, instead act as adhesives through more interactions with the nanocrystals, improving the structural toughness.
+    The solvent-free control shows that Type I nanocrystals do not always align into larger crystals and possess a certain degree of independence.
+    }
+    \label{fig:cellulose_nanocrystal_grid_with_solvent}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_dmf_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_dmso_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_eda_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_eta_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_ipa_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_mta_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_sol_1.2.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_none_1.2.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_dmf_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_dmso_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_eda_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_eta_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_ipa_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_mta_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_sol_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_none_1.2.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_dmf_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_dmso_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_eda_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_eta_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_ipa_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_mta_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_sol_1.4.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_none_1.4.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_dmf_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_dmso_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_eda_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_eta_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_ipa_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_mta_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_sol_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_none_1.4.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_dmf_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_dmso_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_eda_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_eta_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_ipa_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_mta_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_sol_1.6.png}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/model_grid_with_none_1.6.png}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_dmf_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_dmso_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_eda_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_eta_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_ipa_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_mta_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_sol_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.10\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/fracture_grid_with_none_1.6.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Alignment structure and loading fracture of Type II cellulose nanocrystals separated by solvents.
+    (a) 1.2x, (b) 1.4x, and (c) 1.6x spacing.
+    All models were subjected to the same loading strain.
+    Compared with the results of Type I crystals, Type II crystals exhibit stronger stability in solvent environments, and the solvent has no significant effect on the structural morphology.
+    The solvent-free control also shows that Type II crystals always attempt to spontaneously form larger crystals, indicating that Type II crystals have stricter requirements for model size and alignment.
+    }
+    \label{fig:cellulose_nanocrystal_ii_grid_with_solvent}
+\end{figure}
+
+Additionally, considering the arrangement of cellulose nanocrystals in plants, a parallel array structure of cellulose nanocrystals was constructed, where cellulose nanocrystals were arranged in a 2x2 row-column format with certain intervals.
+Intervals sized based on the dimensions of the cellulose nanocrystals.
+With a cellulose nanocrystal size of 1.0, under 1.2x spacing, the length and width of a unit box are set to 1.2 times the crystal size.
+The nanocrystal itself is placed in the center of the box, with solvent filling the surroundings.
+This forms a solvent-nanocrystal-solvent structure, corresponding to horizontal and vertical dimensions of 0.1x-1.0x-0.1x.
+Then, the four-unit boxes are spliced into a 2x2 row-column format for the final structure.
+The treatment for 1.4x and 1.6x spacing is the same, only the intervals increase and more solvent is filled.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/stretch_strength_grid_with_solvent.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_i/stretch_toughness_grid_with_solvent.png}
+        \subcaption{}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/stretch_strength_grid_with_solvent.png}
+        \subcaption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=0.96\textwidth]{cellulose_simulation_grid_with_solvent_ii/stretch_toughness_grid_with_solvent.png}
+        \subcaption{}
+    \end{subfigure}
+    \captionsetup{font=scriptsize}
+    \caption{
+    Mechanical properties of cellulose nanocrystal arrays separated by solvents.
+    Strength and toughness of (a) Type I and (b) Type II cellulose nanocrystal arrays separated by solvents.
+    For both Type I and Type II nanocrystals, an increase in solvent volume corresponds to a decrease in strength and toughness,
+    indicating that the solvent interface dominates the failure in this scenario.
+    }
+    \label{fig:cellulose_nanocrystal_grid_with_solvent_performance}
+\end{figure}
+
+Figure 3-4 provides the structures and mechanical properties of solvent-containing cellulose nanocrystal arrays, also considering several solvent cases:
+DMF, DMSO, ethylenediamine, ethanol, isopropanol, methanol, water, and a solvent-free control group.
+From the fracture structures, it can be seen that the cross-sections of the array arrangement structures in solvent environments are concentrated at the solvent interface,
+which is similarly affected by the molecular size and polarity of the solvent, and significantly influenced by the solvent content.
+In the 1.2x spacing model, small amounts of large-volume solvent molecules like DMF, DMSO, and isopropanol exist within the array structure, and after balancing, they significantly affect the structure of the nanocrystals;
+polar small molecules like water also influence the nanocrystal structure relying on their strong electrostatic interaction capabilities;
+when the spacing is increased to 1.4x or even 1.6x, only DMF and DMSO can damage the structure of cellulose nanocrystals, while the deformation behavior under other solvent conditions is dominated by the solvent interface.
+The solvent-free control group cannot exhibit good toughness due to the weak interface between nanocrystals, but the strength still has an advantage.
+Specific strength and toughness comparison data are provided in Figure 3-6.
+
+Using the same modeling and loading methods, the array performance of Type II cellulose nanocrystals was tested (Figure 3-5).
+The array performance of Type II nanocrystals is less affected by the solvent, and the main deformation behaviors are influenced by the solvent interface.
+Only DMF and DMSO cause some damage to the structure of Type II nanocrystals in the 1.6x spacing model with high solvent content.
+This indicates that Type II nanocrystals have higher thermal stability, which is consistent with views in the literature.
+
+Combining the structural information above with the quantitative performance information provided in Figure 3-6, the strength and toughness of array structures in solvent environments are not dominated by electrostatic interactions.
+Polar small molecules represented by water do not have a positive effect on the strength and toughness of array structures.
+Instead, molecules represented by DMF and DMSO, which have larger volumes and weaker polarity, can interact more with cellulose nanocrystals, thereby reflecting higher strength and toughness.
+Structurally, it is reflected that DMF and DMSO can change the structure of cellulose nanocrystals.
+Overall, the deformation behavior of array structures in solvent environments is dominated by the solvent interface, and both strength and toughness are lower than those of the solvent-free control group.
+
+\subsubsection{Summary of this chapter}\indent
+
+The main content of this chapter is the mechanical properties of cellulose nanocrystals in solvent environments, representing their performance in non-periodic scenarios.
+This is considered because cellulose nanocrystals are often accompanied by solvent molecules in natural environments as well as artificial environments (such as composite materials and gel materials).
+Systematically analyzing the impact of the solvent environment plays a positive role in understanding and developing cellulose-based natural and artificial materials.
+The solvent environments considered specifically cover two cases: surrounded on two sides or multi-block arrays.
+The case of being surrounded on two sides means that the cellulose nanocrystals remain periodic in the yz directions while being separated by solvent in the x direction.
+Solvent is added to both sides of the cellulose nanocrystals to analyze the erosive effect of the solvent on the crystals compared to a solvent-free control.
+The multi-block array case refers to cellulose nanocrystals arranged parallel horizontally and vertically with certain spacing, with the gaps between crystal blocks filled with solvent.
+Pressure control operations were performed in both cases.
+
+In the case of being surrounded on two sides, the erosive capacity of different solvents on cellulose nanocrystals varies significantly.
+This capacity is mainly related to the size and polarity of the solvent molecules. Polar small molecules, represented by ethylenediamine, methanol, and water, have strong erosive capabilities.
+This directly corresponds to the important roles of electrostatic interactions, hydroxyl groups, and hydrogen bonds in cellulose nanocrystals.
+Furthermore, in this case, Type I nanocrystals still exhibit the phenomenon of frictional slip; Type II nanocrystals also transform into a structure similar to lamellae, but this transformation does not effectively improve toughness at this stage.
+This indicates that even under non-periodic conditions, frictional slip remains the dominant failure mode of Type I nanocrystals, which also leads to the strength of Type I nanocrystals being lower than that of Type II when surrounded on two sides.
+
+In the case of multi-block arrays, the solvent's impact on the structure is not as significant as in the two-sided surrounding case, and it is similarly related to solvent molecular size, polarity, and content.
+Moreover, relevant results indicate that electrostatic interaction is not the dominant factor in array environments, and non-polar molecules can also improve toughness.
+For Type I nanocrystals, when a small amount of larger solvent molecules (such as DMF and DMSO) fills the gaps, the crystal structure can be damaged, resulting in better ductility;
+a small amount of water molecules can also cause damage to the crystal structure, improving ductility and toughness.
+However, when the total solvent content increases, solvent molecules cannot significantly affect the structure of Type I nanocrystals.
+DMF, DMSO, and water------which previously played a destructive role------act like adhesives due to their increased interactions with the nanocrystals, thereby enhancing toughness.
+The structural stability of Type II nanocrystals is superior to Type I, maintaining their arrangement across different solvent contents, which corresponds to the higher thermal stability of Type II nanocrystals.
+Simultaneously, it can be seen from the solvent-free control group that Type I nanocrystals can form structures from relatively independent components without solvent, rather than necessarily existing in larger crystal arrangements;
+Type II nanocrystals always attempt to arrange themselves into larger-sized nanocrystals, indicating that Type II nanocrystals have stricter requirements for structure and arrangement.
+Collectively, these results show that the role of solvents in array arrangements is limited, the crystal structure is not significantly damaged during the loading process, and electrostatic interaction is not the dominant factor affecting toughness.
+
+\section*{Conclusions}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Conclusions}\indent
+
+As problems with resource consumption and environmental pollution continue to intensify, the green energy transition of human society has become urgent.
+However, energy transition is not just about using clean energy such as wind, geothermal, and water energy to replace non-renewable fossil energy;
+it also requires the investment of resources to replace fossil fuel-based polymer materials represented by plastics.
+These non-degradable man-made polymer materials are also a major cause of environmental pollution.
+As the most abundant natural polymer material on Earth, cellulose is easy to obtain, possesses many excellent properties, and is widely used in fields such as textiles, packaging, and biopharmaceuticals.
+Among these, the excellent mechanical properties of cellulose materials are the important foundation for their wide application.
+
+With the advancement of technology, the microscopic structure and properties of cellulose nanomaterials have received increasing attention and research.
+At the nanometer scale, cellulose consists of nanocrystals formed by parallel-arranged chains;
+the long strip-like structures formed by the connection of nanocrystals and amorphous regions are cellulose nanofibers.
+Cellulose nanofibers further compose cellulose fibers.
+
+Therefore, cellulose materials often exhibit fibrous structures at macroscopic and mesoscopic scales, which is the main application form of cellulose materials in traditional fields like textiles and composite materials.
+The length of smaller-scale cellulose nanocrystals is not significantly larger than their cross-sectional dimensions, and they possess a special lamellar crystal structure and extremely high elastic modulus.
+Corresponding to the lamellar structure is the complex anisotropy within the axial and cross-sectional directions of cellulose nanocrystals.
+Previous research on the anisotropy of cellulose nanocrystals remains insufficient;
+experiments cannot perform precise control at this scale, and previous simulation studies on anisotropy under different configurations are also inadequate.
+On the basis of anisotropy research, if the anisotropy of cellulose nanocrystals can be considered during material design, reinforced cellulose nanomaterials might be obtained.
+
+The all-atom simulation part of this thesis focuses on the anisotropic mechanical properties of Type I and Type II cellulose nanocrystals, as well as their performance in various solvent environments, conducting a systematic simulation study.
+The simulation results indicate that the performance of cellulose nanocrystals is closely related to hydrogen bonding interactions and shows significant differences under different arrangements.
+Nanocrystals in the axial direction are dominated by covalent bond interactions, possessing the highest elastic modulus and strength;
+within the cross-section, Type I nanocrystals have a unique lamellar structure, where the intra-layer interactions along the lamellar direction are dominated by hydrogen bonding, while the inter-layer interactions perpendicular to the lamellar direction are dominated by van der Waals forces.
+The strength along the lamellar direction can reach the GPa level, while the strength in other directions is hundreds of MPa.
+When the loading direction is inclined to the lamellar direction, a special friction-slip phenomenon is exhibited;
+the arrangement of Type II nanocrystals does not have a lamellar structure in the true sense, but the strength along the layer can reach the GPa level, with other directions being hundreds of MPa.
+When the loading direction is inclined to the layer direction, a special structural reorganization phenomenon is exhibited.
+
+Whether it is the friction-slip phenomenon of Type I or the structural reorganization phenomenon of Type II, both exhibit ductility and toughness rather than the brittleness expected of crystal structures.
+Based on these phenomena, this paper proposes two cross-sectional arrangement schemes: symmetric and cross-type.
+Using these two arrangement modes, it should be possible to significantly improve the ductility and toughness of the structure on the basis of appropriately reducing strength, which is actually proven by relevant simulation data.
+
+\section*{Outlook}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Outlook}\indent
+
+The main innovation points of this thesis are as follows:
+On the basis of a detailed study of anisotropy, symmetric and cross-type cross-sectional arrangement modes are proposed as toughening mechanisms for the mechanical properties of cellulose nanocrystals.
+The simulation part of this thesis detailed the anisotropic structures and properties of different configurations, using models with different arrangement directions to achieve simulations of different loading directions.
+Previous simulation studies were not as detailed as the simulation work in this paper;
+therefore, this paper discovered the special failure phenomena of friction-slip in Type I nanocrystals and structural reorganization in Type II nanocrystals, which were not previously reported.
+Inspired by these special phenomena, this thesis proposed a mechanism for improving toughness based on the cross-sectional arrangement method and actually provided two innovative arrangement modes, named symmetric and cross-type arrangements.
+
+The main contribution of the simulation part of this thesis lies in pointing out the special failure forms of cellulose nanocrystals and, on this basis, proposing the corresponding toughening mechanism of cross-sectional arrangement.
+For this phenomenon, this paper used the change in potential energy density when the structure is damaged for explanation;
+this explanation can clarify the issue in this scenario, but a better mathematical model would surely be able to explain this problem more effectively.
+Subsequent research could also design more arrangements, or better consider the influence of solvents or other molecules, and so on.
+Moreover, limited by the current technical level, although there is related work attempting to arrange and align cellulose nanocrystals using methods such as electromagnetic fields,
+current experimental operation precision might not be able to achieve the proposed cross-sectional arrangement toughening scheme.
+It is hoped that subsequent technological progress will allow this idea to be experimentally verified;
+even if the results are not as good as the simulation, it can still point out directions for further improvement.
+
+\section*{Conflict of Interest declaration}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Conflict of Interest declaration}\indent
+
+The author declares no competing financial interest.
+
+\section*{Data availability}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Data availability}\indent
+
+The training data, models, simulation codes, processed data, plot scripts, and latest manuscript are available at
+
+$\textrm{https://github.com/EiPiFun/cll-transverse-data}$
+
+\noindent
+. The raw data, pre-processing codes, and post-processing codes are available upon requests.
+
+\section*{Acknowledgments}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Acknowledgments}\indent
+
+Xu Dong thanks the Department of Engineering Mechanics of Zhejiang University for the funding and computational resources.
+%\\\\\noindent\Large{\textbf{References}}
+%\newsavebox{\tempbib}
+%\savebox{\tempbib}{\parbox{\textwidth}{
+%\bibliography{cll_cg_references}
+%}}
+
+\linespread{1.0}\footnotesize\bibliography{cll_cg_references}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}References}
+
+
+
+
+
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{S\arabic{subsection}}
+
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theequation}{S\arabic{equation}}
+
+
+
+
+
+\section*{Supplementary Information}
+\addtocounter{section}{1}
+\setcounter{subsection}{0}
+\addcontentsline{toc}{section}{\protect\numberline{}Supplementary Information}\indent
+
+\normalsize The following subsections and data are included in the Supplementary Information.
+\\\indent
+
+Others
+
+\end{document}
+
