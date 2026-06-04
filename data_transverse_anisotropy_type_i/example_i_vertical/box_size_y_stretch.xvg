@@ -1,0 +1,65 @@
+# This file was created Wed May 13 15:58:21 2026
+# Created by:
+#                      :-) GROMACS - gmx energy, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/i_example_vertical_00/vertical
+# Command line:
+#   gmx_2022 energy -f stretch.edr -o box_size_y_stretch.xvg
+# gmx energy is part of G R O M A C S:
+#
+# GRowing Old MAkes el Chrono Sweat
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Box-Y"
+    0.000000    5.021590
+   10.000000    5.121590
+   20.000000    5.221590
+   30.000000    5.321590
+   40.000000    5.421590
+   50.000000    5.521590
+   60.000000    5.621590
+   70.000000    5.721590
+   80.000000    5.821590
+   90.000000    5.921590
+  100.000000    6.021590
+  110.000000    6.121590
+  120.000000    6.221590
+  130.000000    6.321590
+  140.000000    6.421590
+  150.000000    6.521590
+  160.000000    6.621590
+  170.000000    6.721590
+  180.000000    6.821590
+  190.000000    6.921590
+  200.000000    7.021590
+  210.000000    7.121590
+  220.000000    7.221590
+  230.000000    7.321590
+  240.000000    7.421590
+  250.000000    7.521590
+  260.000000    7.621590
+  270.000000    7.721590
+  280.000000    7.821590
+  290.000000    7.921590
+  300.000000    8.021590
+  310.000000    8.121591
+  320.000000    8.221590
+  330.000000    8.321590
+  340.000000    8.421590
+  350.000000    8.521590
+  360.000000    8.621591
+  370.000000    8.721590
+  380.000000    8.821590
+  390.000000    8.921590
+  400.000000    9.021590

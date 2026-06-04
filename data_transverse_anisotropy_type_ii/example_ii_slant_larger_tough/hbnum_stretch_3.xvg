@@ -1,0 +1,58 @@
+# This file was created Wed May 13 19:28:55 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_tough_31/slant_square
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_3.xvg -b 400 -e 599
+# gmx hbond is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       402        4251       14510
+       408        4236       14504
+       414        4250       14453
+       420        4225       14427
+       426        4212       14420
+       432        4262       14469
+       438        4240       14455
+       444        4271       14410
+       450        4202       14509
+       456        4192       14490
+       462        4212       14382
+       468        4226       14440
+       474        4185       14451
+       480        4199       14392
+       486        4181       14334
+       492        4190       14404
+       498        4151       14454
+       504        4145       14496
+       510        4221       14441
+       516        4180       14521
+       522        4206       14416
+       528        4246       14455
+       534        4251       14374
+       540        4215       14371
+       546        4191       14410
+       552        4236       14337
+       558        4196       14385
+       564        4219       14399
+       570        4220       14379
+       576        4210       14359
+       582        4214       14363
+       588        4213       14354
+       594        4243       14203

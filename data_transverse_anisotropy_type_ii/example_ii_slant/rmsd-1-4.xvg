@@ -1,0 +1,39 @@
+# This file was created Wed May 13 16:12:26 2026
+# Created by:
+#                       :-) GROMACS - gmx rms, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_00/slant
+# Command line:
+#   gmx_2022 rms -f relaxation-1-4_nojump.gro -s em.tpr -o rmsd-1-4.xvg
+# gmx rms is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to System"
+   0.0000000    0.0458224
+  10.0000000    0.0529010
+  20.0000000    0.0519808
+  30.0000000    0.0542053
+  40.0000000    0.0536147
+  50.0000000    0.0543083
+  60.0000000    0.0543878
+  70.0000000    0.0538810
+  80.0000000    0.0545669
+  90.0000000    0.0536049
+ 100.0000000    0.0533821
+ 110.0000000    0.0545226
+ 120.0000000    0.0538902
+ 130.0000000    0.0558788
+ 140.0000000    0.0568789
+ 150.0000000    0.0548189
+ 160.0000000    0.0535412
+ 170.0000000    0.0550819
+ 180.0000000    0.0550562
+ 190.0000000    0.0545335
+ 200.0000000    0.0558525

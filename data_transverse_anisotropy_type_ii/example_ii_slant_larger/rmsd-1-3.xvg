@@ -1,0 +1,29 @@
+# This file was created Wed May 13 16:14:15 2026
+# Created by:
+#                       :-) GROMACS - gmx rms, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_00/slant_square
+# Command line:
+#   gmx_2022 rms -f relaxation-1-3_nojump.gro -s em.tpr -o rmsd-1-3.xvg
+# gmx rms is part of G R O M A C S:
+#
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to System"
+   0.0000000    0.0395402
+  10.0000000    0.0484969
+  20.0000000    0.0479041
+  30.0000000    0.0486052
+  40.0000000    0.0493597
+  50.0000000    0.0490473
+  60.0000000    0.0494732
+  70.0000000    0.0497051
+  80.0000000    0.0493356
+  90.0000000    0.0504705
+ 100.0000000    0.0511631

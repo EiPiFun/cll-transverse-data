@@ -1,0 +1,39 @@
+# This file was created Wed May 13 16:12:51 2026
+# Created by:
+#                       :-) GROMACS - gmx rms, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_tough_64/slant
+# Command line:
+#   gmx_2022 rms -f relaxation-1-4_nojump.gro -s em.tpr -o rmsd-1-4.xvg
+# gmx rms is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to System"
+   0.0000000    0.0472147
+  10.0000000    0.0541011
+  20.0000000    0.0520314
+  30.0000000    0.0536460
+  40.0000000    0.0543666
+  50.0000000    0.0536643
+  60.0000000    0.0542577
+  70.0000000    0.0535539
+  80.0000000    0.0547695
+  90.0000000    0.0543106
+ 100.0000000    0.0535500
+ 110.0000000    0.0541532
+ 120.0000000    0.0542651
+ 130.0000000    0.0544712
+ 140.0000000    0.0548975
+ 150.0000000    0.0535765
+ 160.0000000    0.0555278
+ 170.0000000    0.0544007
+ 180.0000000    0.0564234
+ 190.0000000    0.0559266
+ 200.0000000    0.0556431

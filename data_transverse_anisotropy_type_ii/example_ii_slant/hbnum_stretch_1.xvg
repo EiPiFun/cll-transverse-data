@@ -1,0 +1,59 @@
+# This file was created Wed May 13 16:24:32 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_00/slant
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_1.xvg -b 0 -e 199
+# gmx hbond is part of G R O M A C S:
+#
+# Getting the Right Output Means no Artefacts in Calculating Stuff
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        1153        3500
+         6        1165        3462
+        12        1150        3470
+        18        1147        3522
+        24        1150        3522
+        30        1145        3522
+        36        1140        3505
+        42        1115        3528
+        48        1107        3524
+        54        1117        3456
+        60        1084        3468
+        66        1100        3465
+        72        1081        3433
+        78        1093        3423
+        84        1095        3517
+        90        1096        3569
+        96        1094        3555
+       102        1094        3568
+       108        1094        3546
+       114        1086        3559
+       120        1090        3571
+       126        1080        3553
+       132        1081        3547
+       138        1081        3553
+       144        1096        3526
+       150        1091        3543
+       156        1103        3544
+       162        1086        3531
+       168        1087        3512
+       174        1091        3508
+       180        1069        3561
+       186        1083        3496
+       192        1081        3507
+       198        1088        3571

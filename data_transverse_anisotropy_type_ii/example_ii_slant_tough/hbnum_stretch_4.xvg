@@ -1,0 +1,65 @@
+# This file was created Wed May 13 19:44:36 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_tough_64/slant
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_4.xvg -b 400
+# gmx hbond is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       402         997        3573
+       408        1008        3534
+       414         989        3464
+       420         995        3531
+       426        1004        3448
+       432         992        3496
+       438         995        3471
+       444        1017        3481
+       450         993        3521
+       456         996        3495
+       462         992        3542
+       468        1003        3488
+       474        1003        3521
+       480        1008        3503
+       486         996        3447
+       492        1007        3468
+       498        1016        3485
+       504        1006        3434
+       510         994        3442
+       516        1009        3469
+       522         993        3488
+       528         984        3458
+       534         994        3437
+       540         985        3429
+       546         991        3429
+       552         986        3461
+       558         989        3446
+       564         994        3438
+       570         989        3503
+       576         983        3463
+       582         996        3527
+       588        1006        3567
+       594        1004        3497
+       600         996        3463
+       606        1020        3463
+       612         993        3489
+       618        1011        3532
+       624        1013        3512
+       630         999        3534
+       636         992        3528

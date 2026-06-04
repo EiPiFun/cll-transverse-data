@@ -1,0 +1,39 @@
+# This file was created Wed May 13 16:10:14 2026
+# Created by:
+#                       :-) GROMACS - gmx rms, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_vertical_00/vertical
+# Command line:
+#   gmx_2022 rms -f relaxation-1-4_nojump.gro -s em.tpr -o rmsd-1-4.xvg
+# gmx rms is part of G R O M A C S:
+#
+# Giant Rising Ordinary Mutants for A Clerical Setup
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to System"
+   0.0000000    0.0458739
+  10.0000000    0.0547000
+  20.0000000    0.0537449
+  30.0000000    0.0544265
+  40.0000000    0.0528578
+  50.0000000    0.0541485
+  60.0000000    0.0561101
+  70.0000000    0.0530357
+  80.0000000    0.0552378
+  90.0000000    0.0556996
+ 100.0000000    0.0549100
+ 110.0000000    0.0544230
+ 120.0000000    0.0555714
+ 130.0000000    0.0546533
+ 140.0000000    0.0544758
+ 150.0000000    0.0560306
+ 160.0000000    0.0547401
+ 170.0000000    0.0544950
+ 180.0000000    0.0552008
+ 190.0000000    0.0540185
+ 200.0000000    0.0558322

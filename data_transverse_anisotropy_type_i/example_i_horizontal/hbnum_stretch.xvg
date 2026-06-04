@@ -1,0 +1,66 @@
+# This file was created Wed May 13 15:59:16 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/i_example_horizontal_19/horizontal
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Giant Rising Ordinary Mutants for A Clerical Setup
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        2073        6657
+        10        2048        6655
+        20        2058        6472
+        30        2060        6451
+        40        2028        6437
+        50        2053        6564
+        60        2048        6604
+        70        2050        6610
+        80        2051        6605
+        90        2055        6631
+       100        2067        6637
+       110        2072        6622
+       120        2060        6569
+       130        2052        6568
+       140        2052        6631
+       150        2054        6582
+       160        2066        6612
+       170        2050        6616
+       180        2044        6601
+       190        2062        6550
+       200        2080        6533
+       210        2073        6568
+       220        2061        6550
+       230        2046        6655
+       240        2075        6630
+       250        2066        6614
+       260        2050        6617
+       270        2052        6672
+       280        2080        6589
+       290        2033        6603
+       300        2054        6608
+       310        2046        6609
+       320        2050        6625
+       330        2066        6620
+       340        2057        6572
+       350        2067        6578
+       360        2058        6584
+       370        2060        6578
+       380        2069        6551
+       390        2041        6630
+       400        2074        6626

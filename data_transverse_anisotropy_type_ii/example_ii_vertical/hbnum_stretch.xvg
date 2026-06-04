@@ -1,0 +1,79 @@
+# This file was created Wed May 13 16:23:07 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_vertical_00/vertical
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        1146        3528
+         6        1156        3422
+        12        1138        3350
+        18        1119        3322
+        24        1069        3306
+        30        1105        3381
+        36        1087        3333
+        42        1045        3257
+        48        1045        3298
+        54        1023        3310
+        60        1027        3275
+        66        1021        3307
+        72        1031        3289
+        78        1013        3324
+        84        1007        3316
+        90        1034        3300
+        96        1016        3313
+       102        1039        3295
+       108        1016        3313
+       114        1029        3305
+       120        1037        3287
+       126        1031        3300
+       132        1012        3315
+       138        1028        3319
+       144        1029        3272
+       150        1033        3263
+       156        1037        3287
+       162        1043        3291
+       168        1043        3273
+       174        1037        3270
+       180        1026        3321
+       186        1034        3258
+       192        1032        3270
+       198        1036        3284
+       204        1034        3284
+       210        1027        3278
+       216        1024        3309
+       222        1040        3324
+       228        1030        3283
+       234        1041        3271
+       240        1040        3271
+       246        1050        3247
+       252        1045        3292
+       258        1037        3281
+       264        1036        3285
+       270        1028        3278
+       276        1043        3269
+       282        1033        3287
+       288        1032        3282
+       294        1036        3262
+       300        1034        3265
+       306        1026        3308
+       312        1033        3283
+       318        1027        3294

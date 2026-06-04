@@ -1,0 +1,75 @@
+# This file was created Wed May 13 16:27:57 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_00/slant_square
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_1.xvg -b 0 -e 299
+# gmx hbond is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        4628       13927
+         6        4600       13951
+        12        4592       14029
+        18        4594       14005
+        24        4610       13957
+        30        4578       14069
+        36        4578       14013
+        42        4569       14002
+        48        4569       14016
+        54        4552       14023
+        60        4560       14130
+        66        4559       14018
+        72        4535       13973
+        78        4503       14051
+        84        4471       14054
+        90        4502       13953
+        96        4461       14004
+       102        4430       14054
+       108        4439       13978
+       114        4422       13886
+       120        4395       13976
+       126        4367       13991
+       132        4370       14248
+       138        4377       14539
+       144        4365       14524
+       150        4376       14498
+       156        4373       14391
+       162        4384       14481
+       168        4353       14355
+       174        4378       14385
+       180        4351       14357
+       186        4343       14431
+       192        4332       14346
+       198        4364       14271
+       204        4338       14439
+       210        4354       14335
+       216        4330       14374
+       222        4359       14479
+       228        4339       14495
+       234        4359       14465
+       240        4396       14443
+       246        4371       14456
+       252        4375       14448
+       258        4382       14406
+       264        4402       14455
+       270        4374       14454
+       276        4385       14351
+       282        4411       14416
+       288        4368       14396
+       294        4361       14417

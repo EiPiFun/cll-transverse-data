@@ -1,0 +1,45 @@
+# This file was created Wed May 13 16:00:24 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/i_example_slant_00/slant_square
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_1.xvg -e 199
+# gmx hbond is part of G R O M A C S:
+#
+# Grunge ROck MAChoS
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        3855       13257
+        10        3876       13074
+        20        3867       13001
+        30        3861       12771
+        40        3854       12578
+        50        3794       12584
+        60        3803       12652
+        70        3805       13023
+        80        3853       12892
+        90        3825       12768
+       100        3766       12773
+       110        3733       12539
+       120        3706       12445
+       130        3710       12518
+       140        3661       12351
+       150        3612       12387
+       160        3662       12425
+       170        3651       12691
+       180        3691       12754
+       190        3668       12587

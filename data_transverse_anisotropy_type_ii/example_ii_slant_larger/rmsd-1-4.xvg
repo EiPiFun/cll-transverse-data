@@ -1,0 +1,39 @@
+# This file was created Wed May 13 16:14:18 2026
+# Created by:
+#                       :-) GROMACS - gmx rms, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_00/slant_square
+# Command line:
+#   gmx_2022 rms -f relaxation-1-4_nojump.gro -s em.tpr -o rmsd-1-4.xvg
+# gmx rms is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to System"
+   0.0000000    0.0511631
+  10.0000000    0.0925827
+  20.0000000    0.0905557
+  30.0000000    0.0910046
+  40.0000000    0.0894827
+  50.0000000    0.0911535
+  60.0000000    0.0914080
+  70.0000000    0.0900979
+  80.0000000    0.0911006
+  90.0000000    0.0910987
+ 100.0000000    0.0891328
+ 110.0000000    0.0920315
+ 120.0000000    0.0914217
+ 130.0000000    0.0924338
+ 140.0000000    0.0914545
+ 150.0000000    0.0924301
+ 160.0000000    0.0909444
+ 170.0000000    0.0929744
+ 180.0000000    0.0935183
+ 190.0000000    0.0898782
+ 200.0000000    0.0914399

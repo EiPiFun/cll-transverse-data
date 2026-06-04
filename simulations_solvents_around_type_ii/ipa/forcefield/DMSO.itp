@@ -1,0 +1,76 @@
+[ moleculetype ]
+; name	nrexcl
+DMSO	     3
+
+[ atoms ]
+; nr	type	resnr	residu	atom	cgnr	charge	mass
+     1      SG3O3      1      LIG      S      1      0.305    32.0600   ; qtot  0.305
+     2      OG2P1      1      LIG      O      2     -0.549    15.9994   ; qtot -0.244
+     3      CG331      1      LIG     C1      3     -0.148    12.0110   ; qtot -0.392
+     4      CG331      1      LIG     C2      4     -0.148    12.0110   ; qtot -0.540
+     5       HGA3      1      LIG     H1      5      0.090     1.0080   ; qtot -0.450
+     6       HGA3      1      LIG     H2      6      0.090     1.0080   ; qtot -0.360
+     7       HGA3      1      LIG     H3      7      0.090     1.0080   ; qtot -0.270
+     8       HGA3      1      LIG     H4      8      0.090     1.0080   ; qtot -0.180
+     9       HGA3      1      LIG     H5      9      0.090     1.0080   ; qtot -0.090
+    10       HGA3      1      LIG     H6     10      0.090     1.0080   ; qtot -0.000
+
+[ bonds ]
+; ai	aj	funct	b0	Kb
+    1     2     1
+    1     3     1
+    1     4     1
+    3     5     1
+    3     6     1
+    3     7     1
+    4     8     1
+    4     9     1
+    4    10     1
+
+[ pairs ]
+; ai	aj	funct	c6	c12
+    2     5     1 
+    2     6     1 
+    2     7     1 
+    2     8     1 
+    2     9     1 
+    2    10     1 
+    3     8     1 
+    3     9     1 
+    3    10     1 
+    4     5     1 
+    4     6     1 
+    4     7     1 
+
+[ angles ] 
+; ai	aj	ak	funct	th0	cth	S0	Kub
+    2     1     3     5
+    2     1     4     5
+    3     1     4     5
+    1     3     5     5
+    1     3     6     5
+    1     3     7     5
+    5     3     6     5
+    5     3     7     5
+    6     3     7     5
+    1     4     8     5
+    1     4     9     5
+    1     4    10     5
+    8     4     9     5
+    8     4    10     5
+    9     4    10     5
+
+[ dihedrals ]
+; ai	aj	ak	al	funct	phi0	cp	mult
+    2     1     3     5     9
+    2     1     3     6     9
+    2     1     3     7     9
+    4     1     3     5     9
+    4     1     3     6     9
+    4     1     3     7     9
+    2     1     4     8     9
+    2     1     4     9     9
+    2     1     4    10     9
+    3     1     4     8     9
+    3     1     4     9     9
+    3     1     4    10     9

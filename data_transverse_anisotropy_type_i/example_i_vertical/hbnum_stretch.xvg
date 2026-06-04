@@ -1,0 +1,66 @@
+# This file was created Wed May 13 16:21:33 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/i_example_vertical_00/vertical
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# GROup of MAchos and Cynical Suckers
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        2094        6509
+        10        2079        6385
+        20        1988        6131
+        30        1951        6097
+        40        1931        6206
+        50        1963        6180
+        60        1960        6248
+        70        1974        6190
+        80        1960        6196
+        90        1956        6252
+       100        1954        6196
+       110        1944        6202
+       120        1945        6223
+       130        1962        6218
+       140        1954        6144
+       150        1955        6199
+       160        1956        6188
+       170        1951        6156
+       180        1974        6139
+       190        1960        6097
+       200        1960        6199
+       210        1951        6146
+       220        1952        6214
+       230        1956        6141
+       240        1936        6131
+       250        1962        6160
+       260        1925        6178
+       270        1939        6211
+       280        1942        6174
+       290        1944        6178
+       300        1966        6179
+       310        1944        6183
+       320        1944        6161
+       330        1948        6177
+       340        1950        6187
+       350        1971        6144
+       360        1940        6208
+       370        1930        6155
+       380        1934        6202
+       390        1942        6216
+       400        1929        6176

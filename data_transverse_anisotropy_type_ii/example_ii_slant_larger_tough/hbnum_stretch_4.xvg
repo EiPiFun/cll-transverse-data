@@ -1,0 +1,75 @@
+# This file was created Wed May 13 19:29:14 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_tough_31/slant_square
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_4.xvg -b 600 -e 899
+# gmx hbond is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+       600        4194       14323
+       606        4186       14341
+       612        4197       14299
+       618        4214       14274
+       624        4206       14291
+       630        4206       14336
+       636        4188       14359
+       642        4190       14306
+       648        4187       14328
+       654        4155       14312
+       660        4204       14239
+       666        4241       14221
+       672        4231       14234
+       678        4219       14209
+       684        4239       14316
+       690        4213       14267
+       696        4221       14292
+       702        4223       14257
+       708        4237       14247
+       714        4251       14273
+       720        4251       14450
+       726        4248       14327
+       732        4234       14369
+       738        4270       14241
+       744        4277       14317
+       750        4258       14329
+       756        4243       14243
+       762        4214       14247
+       768        4251       14165
+       774        4191       14264
+       780        4218       14145
+       786        4257       14084
+       792        4188       14036
+       798        4178       14086
+       804        4189       14171
+       810        4164       14081
+       816        4217       14075
+       822        4177       14111
+       828        4220       14046
+       834        4202       14032
+       840        4212       14038
+       846        4215       13983
+       852        4193       14036
+       858        4154       13934
+       864        4159       13773
+       870        4148       14008
+       876        4117       13958
+       882        4159       14047
+       888        4166       13987
+       894        4154       14174

@@ -1,0 +1,59 @@
+# This file was created Wed May 13 19:29:44 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_tough_31/slant_square
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_1.xvg -b 0 -e 199
+# gmx hbond is part of G R O M A C S:
+#
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        4616       13954
+         6        4572       13975
+        12        4598       14013
+        18        4591       14035
+        24        4601       14002
+        30        4575       14057
+        36        4572       14065
+        42        4573       14063
+        48        4554       14079
+        54        4565       14041
+        60        4529       14055
+        66        4520       14035
+        72        4508       14027
+        78        4478       14006
+        84        4451       14007
+        90        4466       13980
+        96        4478       13936
+       102        4452       13937
+       108        4441       13923
+       114        4417       13908
+       120        4399       13973
+       126        4334       14157
+       132        4350       14288
+       138        4359       14493
+       144        4335       14539
+       150        4362       14370
+       156        4375       14372
+       162        4344       14395
+       168        4370       14341
+       174        4343       14397
+       180        4350       14436
+       186        4383       14326
+       192        4333       14402
+       198        4331       14448

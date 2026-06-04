@@ -1,0 +1,39 @@
+# This file was created Wed May 13 16:14:51 2026
+# Created by:
+#                       :-) GROMACS - gmx rms, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_square_tough_31/slant_square
+# Command line:
+#   gmx_2022 rms -f relaxation-1-4_nojump.gro -s em.tpr -o rmsd-1-4.xvg
+# gmx rms is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to System"
+   0.0000000    0.0508489
+  10.0000000    0.0926636
+  20.0000000    0.0899197
+  30.0000000    0.0902303
+  40.0000000    0.0902142
+  50.0000000    0.0911151
+  60.0000000    0.0911438
+  70.0000000    0.0890733
+  80.0000000    0.0904930
+  90.0000000    0.0941373
+ 100.0000000    0.0902067
+ 110.0000000    0.0910613
+ 120.0000000    0.0910022
+ 130.0000000    0.0900020
+ 140.0000000    0.0916541
+ 150.0000000    0.0922010
+ 160.0000000    0.0900143
+ 170.0000000    0.0929128
+ 180.0000000    0.0927910
+ 190.0000000    0.0921742
+ 200.0000000    0.0917962

@@ -1,0 +1,42 @@
+# This file was created Wed May 13 16:25:07 2026
+# Created by:
+#                      :-) GROMACS - gmx hbond, 2022.6 (-:
+# 
+# Executable:   /homex/home1/public/software/gromacs-cpu-2022.6/bin/gmx
+# Data prefix:  /homex/home1/public/software/gromacs-cpu-2022.6
+# Working dir:  /homex/home2/cellulose_aa_crsytal_example/ii_example_slant_tough_64/slant
+# Command line:
+#   gmx_2022 hbond -s stretch.tpr -f stretch.xtc -num hbnum_stretch_1.xvg -b 0 -e 99
+# gmx hbond is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0        1154        3518
+         6        1162        3482
+        12        1140        3545
+        18        1139        3480
+        24        1138        3510
+        30        1125        3516
+        36        1129        3465
+        42        1120        3517
+        48        1113        3528
+        54        1096        3486
+        60        1087        3443
+        66        1084        3450
+        72        1067        3701
+        78        1072        3653
+        84        1090        3690
+        90        1089        3700
+        96        1099        3633
